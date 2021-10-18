@@ -2,20 +2,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
 
-*{
-	padding: 0;
-	margin: 0;
-	user-select: none;	
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
 }
 
 body {
-   
+
     min-width: 100%;
     width: 1%;
     -webkit-font-smoothing: antialiased;
     background-image: url(https://www.go-lum.fr/wp-content/uploads/2017/01/golum_body_bg-1.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #content {
@@ -26,7 +26,7 @@ body {
     flex-direction: column;
     align-items: center;
     background: white;
-    padding-top: 11rem; 
+    padding-top: 11rem;
 }
 
 /************************************** Paragraphe de présentation  ****************************************/
@@ -40,11 +40,11 @@ body {
 
 
 #goLum {
-  
+
     width: 90%;
     text-align: center;
     font-family: neucha, cursive;
-    font-size: 2.625rem;
+    font-size: 5rem;
     font-weight: 700;
     padding: 1rem;
 }
@@ -52,9 +52,10 @@ body {
 
 #presentation,
 #implication {
-   
-    width: 90%;
- 
+
+    width: 80%;
+    font-size: 1.5rem;
+
 
     font-family: "Exo 2", "Ubuntu", "Helvetica Neue", sans-serif;
 }
@@ -68,12 +69,98 @@ body {
     padding: 2rem 0 2rem 0;
 }
 
+/******************************************* ANIMATION FLIP ********************************************/
+.front,
+.back {
+    /* Activer la 3D */
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    color: black;
+    text-align: center;
+    position: absolute;
+    -webkit-transition: 2s;
+    transition: 2s ease-in-out;
+
+
+}
+
+#jarno .back,
+#claire .back {
+    width: 90%;
+}
+
+
+#axel .back,
+#luca .back,
+#stephane .back {
+    width: 50%;
+
+}
+
+#maryline .back {
+    height: 50%;
+}
+
+.back {
+    -ms-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    font-family: 'Exo 2', sans-serif;
+
+}
+
+
+.backswapgauche {
+
+    -ms-transform: rotateY(360deg) scale(1.2);
+    -webkit-transform: rotateY(360deg) scale(1.2);
+    transform: rotateY(360deg) scale(1.7) translateX(30%);
+}
+
+.backswapdroite {
+
+    -ms-transform: rotateY(360deg) scale(1.2);
+    -webkit-transform: rotateY(360deg) scale(1.2);
+    transform: rotateY(360deg) scale(1.7) translateX(-25%);
+}
+
+.backswapdroite1 {
+
+    -ms-transform: rotateY(360deg) scale(1.2);
+    -webkit-transform: rotateY(360deg) scale(1.2);
+    transform: rotateY(360deg) scale(1.7) translateX(-60%);
+}
+
+.backswapcentre {
+
+    -ms-transform: rotateY(360deg) scale(1.2);
+    -webkit-transform: rotateY(360deg) scale(1.2);
+    transform: rotateY(360deg) scale(1.7) translateX(-25%);
+}
+
+.frontswap {
+    -ms-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(160deg);
+}
+
+
+
+div>#basDePage {
+    display: none;
+
+}
+
 
 /***********************************************DISPLAY GRID ****************************************/
 
 
 main {
-    
+
     width: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -81,398 +168,565 @@ main {
     gap: 1.5rem;
     margin: 0 auto;
     padding: 10rem 1.5rem 10rem 1.5rem;
-    background-color:#191b1e; 
-     
+    background-color: #4d4e53;
+    overflow: hidden;
+
 }
 
+main:hover {
+    transform: scale(1.01);
+    transition: 1s ease-in-out;
+}
 
-.container{
-  
+.container {
+
     position: relative;
-	-webkit-perspective: 1500px;
-    perspective: 1500px;	
+    -webkit-perspective: 1500px;
+    perspective: 1500px;
 }
 
 .front {
+    display: flex;
     background-repeat: no-repeat;
-    border: 2px solid black;
-    background-color: white;
+    background-color: black;
 }
 
-#imgClaire{
+.front>div:nth-child(1) {
+    display: flex;
+}
+
+/*********************************************** CARD FRONT ****************************************/
+.front>div {
     width: 50%;
 }
 
-#imgAxel{
-    position: relative;
-    width: 39%;
-    height: auto;
-    left: -18rem;
-   
+.front p {
+    color: black;
+    font-size: 1.5rem;
+    font-family: neucha, cursive;
 }
 
-#imgLuca{
-    position: relative;
-    width: 29%;
-    height: auto;
-    top: -2rem;
-    left: 20rem; 
-}
+.imgFront {
 
-#imgJarno{
-    width: 85%;
-    position: relative;
-    left: -3rem;
-}
-
-#imgStephane{
-    width: 40%;
-    position: relative;
-    top: -2rem;
-    left: 19rem;
-    
-}
-
-
-.front,
-.back{
-	/* Activer la 3D */
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	width: 100%;
     height: 100%;
-	color: black;
-	text-align:center;
-	position:absolute;
-	-webkit-transition:2s;
-    transition:2s ease-in-out;
-    z-index: 40;
-	
-}
-.back{
-	-ms-transform:rotateY(180deg);
-	-webkit-transform:rotateY(180deg);
-	transform:rotateY(180deg);
-    font-family: 'Exo 2', sans-serif;
-    
 }
 
-
-
-.backswapgauche {
-    
-	-ms-transform:rotateY(360deg) scale(1.5);
-	-webkit-transform:rotateY(360deg) scale(1.5);
-    transform: rotateY(360deg) scale(1.7) translateX(30%);
+.center {
+    display: flex;
+    flex-direction: column;
 }
 
-.backswapdroite {
-  
-	-ms-transform:rotateY(360deg) scale(1.5);
-	-webkit-transform:rotateY(360deg) scale(1.5);
-    transform: rotateY(360deg) scale(1.7) translateX(-25%);
+.bulle {
+    position: relative;
 }
 
-.backswapdroite1 {
-    
-	-ms-transform:rotateY(360deg) scale(1.5);
-	-webkit-transform:rotateY(360deg) scale(1.5);
-    transform: rotateY(360deg) scale(1.7) translateX(-60%);
+/********* FRONT CLAIRE *********/
+#claire>.front {
+    background-image: url(./images/montagne/montagne4_4.svg);
+    background-size: 105%;
+    background-position: center;
 }
 
-.backswapcentre {
-   
-	-ms-transform:rotateY(360deg) scale(1.5);
-	-webkit-transform:rotateY(360deg) scale(1.5);
-    transform: rotateY(360deg) scale(1.7) translateX(-25%);
+#paraClaire {
+    position: relative;
+    left: -6rem;
+    top: -12rem;
+
 }
 
-.frontswap {
-	-ms-transform:rotateY(180deg);
-	-webkit-transform:rotateY(180deg);
-	transform:rotateY(160deg);
+#bulleClaire {
+    transform: scaleX(-1);
+    left: -6.5rem;
+
 }
 
 
-
-div > #basDePage {
-    display: none;
-    
+/********* FRONT LUCA *********/
+#luca>.front {
+    background-image: url(./images/montagne/montagne3_4.svg);
+    background-position: center;
+    background-size: 110%;
 }
+
+#bulleLuca {
+    transform: scaleY(-1) rotate(-60deg);
+    width: 400px;
+    max-width: 400px;
+    left: 8rem;
+}
+
+#paraLuca {
+    position: relative;
+    top: -17rem;
+    left: 4rem;
+
+}
+
+/********* FRONT AXEL *********/
+#axel>.front {
+    background-image: url(./images/montagne/montagne1_6.svg);
+    background-size: 118%;
+}
+
+#bulleAxel {
+    transform: scaleY(-1) rotate(45deg);
+    width: 400px;
+    max-width: 400px;
+    left: -18rem;
+    top: 4rem;
+    z-index: 2;
+}
+
+#paraAxel {
+    position: relative;
+    left: -21rem;
+    top: -13rem;
+    z-index: 3;
+}
+
+#imgAxel {
+    justify-self: flex-start;
+    z-index: 10;
+    width: 100%;
+}
+
+/********* FRONT MARIE *********/
+#marie>.front {
+    background-image: url(./images/montagne/montagne4_4.svg);
+    background-position: bottom;
+    background-size: 190%;
+}
+
+#bulleMarie {
+    width: 280px;
+    max-width: 280px;
+}
+
+#paraMarie {
+    position: relative;
+    top: -10rem;
+    left: 1rem;
+}
+
+#imgMarie {
+    position: relative;
+    left: -8rem;
+}
+
+
+
+/********* FRONT JARNO *********/
+#jarno>.front {
+    background-image: url(./images/montagne/montagne3_4.svg);
+    background-position: center;
+    background-size: 150%;
+}
+
+#bulleJarno {
+    transform: scaleX(-1);
+    width: 300px;
+    max-width: 300px;
+    left: -13rem;
+    top: -0.85rem;
+    z-index: 2;
+}
+
+#imgJarno {
+    z-index: 10;
+}
+
+#paraJarno {
+    position: relative;
+    left: -12.5rem;
+    top: -14rem;
+    z-index: 3;
+}
+
+
+/********* FRONT NICOLAS *********/
+#nicolas>.front {
+    background-image: url(./images/montagne/montagne4_4.svg);
+    background-position: center;
+    background-size: 180%;
+}
+
+#bulleNicolas {
+    width: 300px;
+    max-width: 300px;
+
+}
+
+#paraNicolas {
+    position: relative;
+    top: -11rem;
+    left: 1rem;
+
+}
+
+
+/********* FRONT ALVIN *********/
+#alvin>.front {
+    background-image: url(./images/montagne/montagne3_4.svg);
+    background-position: center;
+    background-size: 200%;
+}
+
+#bulleAlvin {
+    width: 350px;
+    max-width: 350px;
+    z-index: 5;
+}
+
+#paraAlvin {
+    position: relative;
+    left: 3rem;
+    top: -15rem;
+    z-index: 7;
+}
+
+#imgAlvin {
+    z-index: 1;
+}
+
+/********* FRONT MARYLINE *********/
+#maryline>.front {
+    background-image: url(./images/montagne/montagne4_4.svg);
+    background-position: center;
+    background-size: 200%;
+}
+
+#bulleMaryline {
+    width: 320px;
+    max-width: 320px;
+    transform: scaleX(-1);
+}
+
+#paraMaryline {
+    position: relative;
+    top: -13rem;
+    left: 1rem;
+    z-index: 10;
+
+}
+
+#maryline .imgFront {
+    position: relative;
+    height: 90%;
+    left: -2rem;
+    z-index: 1;
+
+}
+
+/********* FRONT AURELIEN *********/
+#aurelien>.front {
+    background-image: url(./images/montagne/montagne4_4.svg);
+    background-position: center;
+    background-size: 180%;
+}
+
+#bulleAurelien {
+    width: 350px;
+    max-width: 350px;
+    left: -7rem;
+    top: -2rem;
+    z-index: 2;
+}
+
+#paraAurelien {
+    position: relative;
+    top: -16rem;
+    left: -3rem;
+    z-index: 11;
+}
+
+#imgAurelien {
+    z-index: 10;
+}
+
+/********* FRONT GUILLAUME *********/
+#guillaume>.front {
+    background-image: url(./images/montagne/montagne3_4.svg);
+    background-position: center;
+    background-size: 185%;
+}
+
+#bulleGuillaume {
+    width: 350px;
+    max-width: 350px;
+}
+
+#paraGuillaume {
+    position: relative;
+    top: -15rem;
+    left: 2rem;
+}
+
+#imgGuillaume {
+    position: relative;
+    left: -4rem;
+}
+
+/********* FRONT STEPHANE *********/
+#stephane>.front {
+    background-image: url(./images/montagne/montagne30.svg);
+    background-position: center;
+}
+
+#bulleStephane {
+    width: 350px;
+    max-width: 350px;
+    top: -2rem;
+}
+
+#paraStephane {
+    position: relative;
+    top: -15rem;
+    left: -5rem;
+}
+
+#imgStephane {
+    position: relative;
+    left: -15rem;
+}
+
+
+
+
+
+
 
 /********************************************* COTE BACK PRESENTATION ****************************************/
 
 /********************* BACK CARD CHOIX1 **************/
 
-.choix1 > .back {
+.choix1>.back {
     display: flex;
-    background-color:#191b1e;
+    background-color: #191b1e;
     padding: 2rem;
     color: white;
-    line-height: 1.2rem;
+    line-height: 1.1rem;
     font-family: 'Roboto', sans-serif;
 }
 
 /********** DIV LEFT ********/
 
 .left {
-    
+    display: flex;
+    align-items: center;
     width: 65%;
     padding: 1rem;
     text-align: center;
 
-
 }
 
-.left > div:nth-child(1) {
-
-    width: 100%;
-  
-}
-
-.left img {
-    width: 500px;
+#profilClaire {
     position: relative;
-    top: -1rem;
-    
-    
+    left: -7rem;
 }
 
-.profil {
+h1 {
+    font-size: 0.9rem;
+    font-weight: 900;
+}
 
+#claire .left {
+    background: url(./images/backCard/profilClaire.svg);
+    background-repeat: no-repeat;
+}
+
+#luca .left {
+    background: url(./images/backCard/profilLuca.svg);
+    background-repeat: no-repeat;
+    background-position: right 30%;
+}
+
+#profilLuca {
     position: relative;
-    top: -22rem;
+    top: 6rem;
+}
+
+
+#axel .left {
+    background: url(./images/backCard/profilAxel.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 10px right 60px;
+}
+
+#marie .left {
+    background: url(./images/backCard/profilMarie.svg);
+    background-repeat: no-repeat;
+    background-position: right 15px bottom 0px;
+}
+
+#profilMarie,
+#profilJarno {
+    position: relative;
+    top: 6rem;
+    left: -2rem;
+}
+
+#jarno .left {
+    background: url(./images/backCard/profilJarno.svg);
+    background-repeat: no-repeat;
+    background-size: 80%;
+
+
+
+}
+
+#nicolas .left {
+    background: url(./images/backCard/profilNicolas.svg);
+    background-repeat: no-repeat;
+
+    background-size: 100%;
+}
+
+#profilnicolas {
+    position: relative;
+    top: 6rem;
+}
+
+#alvin .left {
+    background: url(./images/backCard/profilAlvin.svg);
+    background-repeat: no-repeat;
+    background-position: right 30px bottom 0px;
+}
+
+#maryline .left {
+    background: url(./images/backCard/profilMaryline.svg);
+    background-repeat: no-repeat;
+    background-position: right 15px bottom 0px;
+}
+
+#profilMaryline {
+    position: relative;
+    top: 4rem;
     left: -1rem;
-
-    width: 100%;
 }
 
-.profil > h1 {
+
+#aurelien .left {
+    background: url(./images/backCard/profilAurelien.svg);
+    background-repeat: no-repeat;
+}
+
+#profilAurelien {
+    position: relative;
+    top: 5rem;
+    left: 1rem;
+}
+
+#guillaume .left {
+    background: url(./images/backCard/profilGuillaum.svg);
+    background-repeat: no-repeat;
+    background-position: left 30px bottom 0px;
+}
+
+#profilGuillaume {
+    position: relative;
+    top: 5rem;
+
+}
+
+#stephane .left {
+    background: url(./images/backCard/profilStephane.svg);
+    background-repeat: no-repeat;
+    background-size: 110%;
+
+
+}
+
+
+/**************** DIV DROITE ***********/
+.profil {
+    width: 70%;
+    margin: 0 auto;
     color: black;
+    position: relative;
+}
+
+.profil>h1 {
     padding-bottom: 0.5rem;
 }
 
+.profil>.temoignage {
 
 
-.profil > .temoignage {
-    width: 80%;
-   padding: 0 2rem 2rem 2rem;
-   font-size: 0.8rem;
-   font-weight: bold;
+    font-size: 0.6rem;
+    font-weight: bold;
 
 }
+
+#profilClaire {
+    left: -3.5rem;
+    top: 5.5rem;
+}
+
+#profilLuca {
+    left: 2rem;
+}
+
+#profilAxel {
+    top: 5rem;
+    left: -0.5rem;
+}
+
+#profilMarie {
+    left: 1rem;
+}
+
+#profilNicolas {
+    top: 4rem;
+    left: 1rem;
+
+}
+
+#profilAlvin {
+    top: 5rem;
+
+}
+
+#profilMarie {}
+
+#profilMarie {}
+
+#profilMarie {}
+
+#profilMarie {}
+
+
 
 /********** DIV RIGHT ********/
 
 
 .right {
-    width: 35%;
+    width: 30%;
     display: flex;
     flex-direction: column;
- 
-    text-align: center;   
+    justify-content: center;
+    align-items: center;
+
+
+    text-align: center;
 }
-.right > h2 {
-    padding: 1rem;
-}
+
+
 .parcours {
     width: 100%;
-    padding-left: 0;
+    padding: 1rem;
     font-size: 0.8rem;
     font-weight: bold;
-    
+
 }
 
 
-.parcours > li {
+.parcours>li {
     list-style: none;
     text-align: center;
-  
+
     width: 100%;
     margin-bottom: 0.4rem;
 }
-/************* personnalisation choix 1 ******************/
-
-#axel > .back > .left > div > img {
-    left: -2rem;
-  
-}
-
-
-/***************************************/
-#alvin > .back > .left > div > img {
-    width: 430px;
-  
-}
-
-
-/***************************************/
-#aurelien > .back > .left > div > img {
-    width: 430px;
-    position: relative;
-    top: -3rem;
-    left: -2rem;
-}
-
-#aurelien> .back > .left > .profil {
-    top: -27rem;
-    
-}
-
-/***************************************/
-#stephane > .back > .left > div > img {
-    width: 550px;
-    position: relative;
-    top: -1rem;
-}
-
-#stephane > .back > .left > .profil {
-    top: -24rem;
-    left: 0;
-}
-
-#stephane > .back > .left > .profil > h1 {
-    padding-bottom: 0.5rem;
-}
-
-/*******************************************************************/
-
-/********************* BACK CARD CHOIX2 **************/
-
-.choix2 > .back {
-
-
-    display: flex;
-    background-color:#191b1e;
-    padding: 2rem;
-    color: white;
-    line-height: 1.2rem;
-    font-family: 'Roboto', sans-serif;
-}
-
-.choix2 img {
-    width: 470px;
-    left: -2rem;
-}
-
-.choix2 .profil {
-    top: -26rem;
-    left: 0.5rem;
-}
-
-.choix2 > .back > .left > .profil > h1 {
-    
-    position: relative;
-    top: 3rem;
-   
-  
-}
-
-.choix2 > .back > .left > .profil > .temoignage {
-    
-    position: relative;
-    top: 3rem;
-   
-  
-}
-
-
-/************* personnalisation choix 2 ******************/
-
-#luca > .back > .left > div > img {
-    width: 470px;
-    position: relative;
-    left: -2rem;
-  
-}
-
-#luca > .back > .left > .profil > h1 {
-    
-    position: relative;
-    top: 3rem;
-   
-  
-}
-
-/***************************************/
-
-#marie > .back > .left > div > img {
-    width: 530px;
-    
-  
-}
-
-#marie > .back > .left > .profil > h1 {
-    top: 2rem;
-    left: -1rem;  
-  
-}
-
-#marie > .back > .left > .profil > .temoignage {
-    top: 2rem;
-  
-}
-
-/***************************************/
-
-#maryline > .back > .left > .profil > h1 {
-    position: relative;
-    left: 1rem;
-   
-}
-
-#maryline > .back > .left > .profil > .temoignage {
-    position: relative;
-    left: 1rem;
-   
-}
-
-
-/***************************************/
-
-#guillaume > .back > .left > div > img {
-    width: 520px;
-   
-}
-
-
-/***************************************/
-
-#nicolas > .back > .left > div > img {
-    width: 500px;
-   
-}
-
-#nicolas > .back > .left > .profil > h1 {
-    
-    top: 0;
-}
-
-#nicolas > .back > .left > .profil > .temoignage {
-    top: 0;
-}
-
-/***************************************/
-
-#jarno > .back > .left > div > img {
-    width: 565px;
-   
-}
-
-#jarno > .back > .left > .profil > h1 {
-    
-    top: 1rem;
-    left: -1rem;
-}
-
-#nicolas > .back > .left > .profil > .temoignage {
- 
-    top: 1rem;
-}
-
-
 
 
 
@@ -483,18 +737,13 @@ div > #basDePage {
 #claire {
     width: 622px;
     height: 450px;
-  
-    z-index: 2;
-
 }
 
-
-
 #luca {
-    
+
     grid-column: 2 / span 2;
-    z-index: 1;
-    
+
+
 }
 
 
@@ -502,435 +751,375 @@ div > #basDePage {
 /**************************/
 
 #axel {
-    
+
     grid-row: 2 / span 1;
     grid-column: 1 / span 2;
-    
+
 }
 
+#jarno {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+}
 
+#maryline {
 
-#jarno{
-   
     grid-row: 4 / span 2;
     grid-column: 1 / span 1;
-    
+
 
 }
 
 #stephane {
-    
+
     grid-row: 5 / span 1;
     grid-column: 2 / span 2;
-    
+
 }
 
-/*********************************************** INSERTION BACKGROUND-IMAGE ****************************************/
-#claire > .front {
-    background-image: url(./images/montagne4.svg);
-    background-position: bottom;  
-    
-}
-
-#luca > .front {
-    background-image: url(./images/montagne2.svg);
-}
-
-
-#axel > .front {
-    background-image: url(./images/montagne5.svg);  
-    background-size: 105%;  
-}
-
-
-#marie > .front {
-    background-image: url(./images/4_marie.svg);
-    background-position: right;
-    
-    
-}
-
-#maryline > .front {
-    background-image: url(./images/5_maryline.svg);
-    
-    
-}
-
-#nicolas > .front {
-    background-image: url(./images/6_nicolas.svg);
-    background-position: center;
-   
-    
-}
-
-#alvin > .front {
-    background-image: url(./images/7_alvin.svg);
-    background-position: right;
-  
-    
-}
-
-#jarno > .front {
-    background-image: url(./images/montagne4.svg);
-    background-size: 180%;
-    background-position: center;
-    
-  
-    
-}
-
-#aurelien > .front {
-    background-image: url(./images/9_aurelien.svg);
-    
-    
-}
-
-
-#guillaume > .front {
-    background-image: url(./images/10_guillaume.svg);
-    background-position: right;
-    
-    
-}
-
-
-#stephane > .front {
-    background-image: url(./images/montagne1.svg);
-    background-position: 115%;
-   
-    
-}
-
-/*********************************************** MEDIAS QUERIES****************************************/
+/********************************************* MEDIAS QUERIES****************************************/
 @media screen and (max-width:2560px) {
 
     main {
         width: 80%;
     }
 
-/**************** TRANSLATION ***************/
-
-.backswapgauche {
-  
-	-ms-transform:rotateY(360deg) scale(1.5);
-	-webkit-transform:rotateY(360deg) scale(1.5);
-    transform: rotateY(360deg) scale(1.7) translateX(50%);
-}
-
-
-.backswapdroite1 {
-
-	-ms-transform:rotateY(360deg) scale(1.5);
-	-webkit-transform:rotateY(360deg) scale(1.5);
-    transform: rotateY(360deg) scale(1.7) translateX(-60%);
-}
-
-.backswapcentre,
-.backswapdroite {
- 
-	-ms-transform:rotateY(360deg) scale(1.5);
-	-webkit-transform:rotateY(360deg) scale(1.5);
-    transform: rotateY(360deg) scale(1.7) translateX(-5%);
-}
-
-@media screen and (max-width:1440px) {
-
-    main {
-        width: 90%;
-    }
-
-    .back img {
-        height: 530px;
-    }
-
-/********************* BACK CARD  **************/
-
-
-/************************************TRANSLATION DE LA CARD***************************************/
-}
-
-@media screen and (min-width:769px) and (max-width:1300px){
-
-    main {
-        padding: 1rem;
-    }
-
-      #marie{
-          min-width: 230px;
-      }
-
-}
-
-
-
-@media screen and (min-width:768px) and (max-width:1440px){
-
-    main {
-        width: 90%;
-        
-        display: grid; 
-        grid-template-columns: 1fr 1fr; 
-        grid-template-rows: repeat(7,1fr); 
-        gap: 1rem 1rem; 
-        grid-template-areas: 
-          "luca luca"
-          "claire marie"
-          "axel axel"
-          "maryline nicolas"
-          "jarno alvin"
-          "aurelien guillaume"
-          "stephane stephane"; 
-      }
-      #luca { grid-area: luca; }
-      #alvin { grid-area: alvin; }
-      #claire { grid-area: claire; }
-      #marie { grid-area: marie; }
-      #axel { grid-area: axel; }
-      #maryline { grid-area: maryline; }
-      #nicolas { grid-area: nicolas; }
-      #jarno { grid-area: jarno; }
-      #aurelien { grid-area: aurelien; }
-      #guillaume { grid-area: guillaume; }
-      #stephane { grid-area: stephane; }
-
-
-    #claire {
-        width: 660px;
-        height: 400px;
-    }
-
-
-    div > #basDePage {
-        display: inline; 
-        text-align: center;
-        padding:1rem;
-    }
-    
-    #basDePage > i {
-        color: white;  
-        background-color:#191b1e;
-        margin-top: 1rem;
-        border-radius: 40px;
-        height: 40px;
-        width: 40px;
-    }
-
-
-
-
-
-
-
-}
-
-
-/*********************************************** DISPLAY GRID ***************************/
-
-
-
-
-
-@media screen and (max-width:768px) {
-
-    #content {
-        width: 100% ;
-        text-align: justify;
-    }
-
-    main {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-    }
-
-    .container,
-    #claire {
-        width: 470px;
-        height: 470px;
-    }
-
-    .back {
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-        border: 2px solid red;
-    }
-
+    /**************** TRANSLATION ***************/
 
     .backswapgauche {
-        max-width: 470px;
-        max-height: 470px;
-        -ms-transform:rotateY(360deg) ;
-        -webkit-transform:rotateY(360deg) ;
-        transform: rotateY(360deg);
+
+        -ms-transform: rotateY(360deg) scale(1.5);
+        -webkit-transform: rotateY(360deg) scale(1.5);
+        transform: rotateY(360deg) scale(1.7) translateX(50%);
     }
-    
-    
+
+
     .backswapdroite1 {
-        max-width: 470px;
-        max-height: 470px;
-        -ms-transform:rotateY(360deg) scale(1.5);
-        -webkit-transform:rotateY(360deg) scale(1.5);
-        transform: rotateY(360deg);
+
+        -ms-transform: rotateY(360deg) scale(1.5);
+        -webkit-transform: rotateY(360deg) scale(1.5);
+        transform: rotateY(360deg) scale(1.7) translateX(-60%);
     }
-    
+
     .backswapcentre,
     .backswapdroite {
-        max-width: 470px;
-        max-height: 470px;
-        -ms-transform:rotateY(360deg) scale(1.5);
-        -webkit-transform:rotateY(360deg) scale(1.5);
-        transform: rotateY(360deg);
-    }
-    
 
-    div > #basDePage {
-        display: inline; 
-        text-align: center;
-        padding:1rem;
-    }
-    
-    #basDePage > i {
-        color: white;  
-        background-color:#191b1e; 
-        margin-top: 1rem;
-        border-radius: 40px;
-        height: 40px;
-        width: 40px;
+        -ms-transform: rotateY(360deg) scale(1.5);
+        -webkit-transform: rotateY(360deg) scale(1.5);
+        transform: rotateY(360deg) scale(1.7) translateX(-5%);
     }
 
-    
-    .temoignage,
-    .parcours {
-        font-size: 0.7em;
-       
+    @media screen and (max-width:1440px) {
+
+        main {
+            width: 90%;
+        }
+
     }
 
-    .left > div >  img {
-   
-        width: 100px;
-        height: 100px;
+    @media screen and (min-width:769px) and (max-width:1300px) {
+
+        main {
+            padding: 1rem;
+        }
+
+        #marie {
+            min-width: 230px;
+        }
+
     }
 
-}
+    @media screen and (max-width:1727px) {
+        #claire {
+            width: 450px;
+            max-width: 450px;
+        }
 
-@media screen and (max-width:468px) {
-
-
-    #content {
-        width: 100% ;
-        text-align: justify;
     }
 
-    main {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 3rem 0 3rem 0;
+    @media screen and (min-width:768px) and (max-width:1440px) {
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(7, 1fr);
+            gap: 1rem 1rem;
+            grid-template-areas:
+                "luca luca"
+                "claire marie"
+                "axel axel"
+                "maryline nicolas"
+                "jarno alvin"
+                "aurelien guillaume"
+                "stephane stephane";
+        }
+
+        #luca {
+            grid-area: luca;
+        }
+
+        #alvin {
+            grid-area: alvin;
+        }
+
+        #claire {
+            grid-area: claire;
+        }
+
+        #marie {
+            grid-area: marie;
+        }
+
+        #axel {
+            grid-area: axel;
+        }
+
+        #maryline {
+            grid-area: maryline;
+        }
+
+        #nicolas {
+            grid-area: nicolas;
+        }
+
+        #jarno {
+            grid-area: jarno;
+        }
+
+        #aurelien {
+            grid-area: aurelien;
+        }
+
+        #guillaume {
+            grid-area: guillaume;
+        }
+
+        #stephane {
+            grid-area: stephane;
+        }
+
+
+        #claire {
+            width: 660px;
+            max-width: 660px;
+            height: 400px;
+            max-height: 400px;
+        }
+
+
+        div>#basDePage {
+            display: inline;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        #basDePage>i {
+            color: white;
+            background-color: #191b1e;
+            margin-top: 1rem;
+            border-radius: 40px;
+            height: 40px;
+            width: 40px;
+        }
+
     }
 
-  
-    .container,
-    #claire {
-        width: 430px;
-        height: 430px;
+    @media screen and (max-width:1024px) {
+        #claire {
+            width: 350px;
+            max-width: 350px;
+
+
+        }
     }
 
-    .back {
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-        
+    @media screen and (max-width:768px) {
+
+        #content {
+            width: 100%;
+            text-align: justify;
+        }
+
+        main {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            font-size: 0.3rem;
+        }
+
+        .container,
+        #claire {
+            width: 470px;
+            max-width: 470px;
+            height: 470px;
+            max-height: 470px;
+        }
+
+        #bulle {
+            width: 250px;
+        }
+
+        .back {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border: 2px solid red;
+        }
+
+
+        .backswapgauche {
+            max-width: 470px;
+            max-height: 470px;
+            -ms-transform: rotateY(360deg);
+            -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+        }
+
+
+        .backswapdroite1 {
+            max-width: 470px;
+            max-height: 470px;
+            -ms-transform: rotateY(360deg) scale(1.5);
+            -webkit-transform: rotateY(360deg) scale(1.5);
+            transform: rotateY(360deg);
+        }
+
+        .backswapcentre,
+        .backswapdroite {
+            max-width: 470px;
+            max-height: 470px;
+            -ms-transform: rotateY(360deg) scale(1.5);
+            -webkit-transform: rotateY(360deg) scale(1.5);
+            transform: rotateY(360deg);
+        }
+
+
+        div>#basDePage {
+            display: inline;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        #basDePage>i {
+            color: white;
+            background-color: #191b1e;
+            margin-top: 1rem;
+            border-radius: 40px;
+            height: 40px;
+            width: 40px;
+        }
+
+
+        .temoignage,
+        .parcours {
+            font-size: 0.7em;
+
+        }
+
+        .left>div>img {
+
+            width: 100px;
+            height: 100px;
+        }
+
     }
 
-    .choix1 > .back,
-    .choix2 > .back {
-        line-height: 1.1;
+    @media screen and (max-width:468px) {
+
+
+        #content {
+            width: 100%;
+            text-align: justify;
+        }
+
+        main {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 0 3rem 0;
+        }
+
+        .container,
+        #claire {
+            width: 430px;
+            max-width: 430px;
+            height: 430px;
+            max-height: 430px;
+        }
+
+        .back {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+
+        }
+
+        .choix1>.back,
+        .choix2>.back {
+            line-height: 1.1;
+        }
+
+        .choix1 .left>div>img {
+
+            width: 400px;
+            height: 400px;
+            border: 2px solid yellow;
+            position: relative;
+            left: -4.5rem;
+            top: -3rem;
+        }
+
+        .choix2 .left>div>img {
+
+            width: 380px;
+            height: 380px;
+            border: 2px solid green;
+            position: relative;
+            left: 2rem;
+
+        }
+
+        .profil {
+            border: 2px solid orange;
+            padding: 0;
+        }
+
+        .profil>.temoignage {
+            font-size: 0.7rem;
+            padding: 0;
+            border: 1px solid purple;
+            width: 100%;
+        }
+
+        .main_white {
+            background-color: white;
+        }
+
+
+
+
+
+
+
+
+        div>#basDePage {
+            display: inline;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        #basDePage>i {
+            color: white;
+            background-color: #191b1e;
+            margin-top: 1rem;
+            border-radius: 40px;
+            height: 40px;
+            width: 40px;
+        }
+
+
+
     }
-
-    .choix1 .left > div >  img {
-    
-        width: 400px;
-        height: 400px;
-        border: 2px solid yellow;
-        position: relative;
-        left: -4.5rem;
-        top: -3rem; 
-    }
-
-    .choix2 .left > div >  img {
-    
-        width: 380px;
-        height: 380px;
-        border: 2px solid green;
-        position: relative;
-        left: 2rem;
-        
-    }
-
-    .profil {
-        border: 2px solid orange;
-        padding: 0;
-    }
-
-    .profil > .temoignage {
-        font-size: 0.7rem;
-        padding: 0;
-        border: 1px solid purple;
-        width: 100%;
-    }
-
-    .main_white {
-        background-color: white;
-    }
-
-
-  
-
-
-
-
-
-    div > #basDePage {
-        display: inline; 
-        text-align: center;
-        padding:1rem;
-    }
-    
-    #basDePage > i {
-        color: white;  
-        background-color:#191b1e; 
-        margin-top: 1rem;
-        border-radius: 40px;
-        height: 40px;
-        width: 40px;
-    }
-
-    
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/*********************************************** INSERTION DES IMAGES BULLES ***************************/
-
-
-
-
-
-
-
-
-
