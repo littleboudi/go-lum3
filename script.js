@@ -1,27 +1,29 @@
 $(document).ready(function () {
   $(".container").hover(function () {
-    $(this).siblings("section").css({ filter: "blur(20px)" });
-    $("main").addClass("main_white");
+      $(this).siblings("section").css({
+        filter: "blur(20px)"
+      });
+      $("main").addClass("main_white");
 
-    if ($(this).hasClass("gauche")) {
-      $(this).children(".back").addClass("backswapgauche");
-      $(this).children(".back").addClass("backslide");
-    } else if ($(this).hasClass("droite")) {
-      $(this).children(".back").addClass("backswapdroite");
-      $(this).children(".back").addClass("backslide");
-    } else if ($(this).hasClass("droite1")) {
-      $(this).children(".back").addClass("backswapdroite1");
-      $(this).children(".back").addClass("backslide");
-    } else {
-      $(this).children(".back").addClass("backswapcentre");
-      $(this).children(".back").addClass("backslide");
-    }
+      if ($(this).hasClass("gauche")) {
+        $(this).children(".back").addClass("backswapgauche");
 
-    $(this).children(".front").addClass("frontswap");
-    $(this).addClass("transformation");
-    $(this).css("z-index", "30000");
-    $(this).siblings("section").css("z-index", "11000");
-  }),
+
+      } else if ($(this).hasClass("droite")) {
+        $(this).children(".back").addClass("backswapdroite");
+
+      } else if ($(this).hasClass("droite1")) {
+        $(this).children(".back").addClass("backswapdroite1");
+
+      } else {
+        $(this).children(".back").addClass("backswapcentre");
+      }
+
+      $(this).children(".front").addClass("frontswap");
+      $(this).addClass("transformation");
+      $(this).css("z-index", "30000");
+      $(this).siblings("section").css("z-index", "11000");
+    }),
     $(".container").mouseleave(function () {
       $("main").removeClass("main_white");
       if ($(this).hasClass("gauche")) {
@@ -35,6 +37,14 @@ $(document).ready(function () {
       }
 
       $(this).children(".front").removeClass("frontswap");
-      $(this).siblings("section").css({ filter: "blur(0px)" });
+      $(this).siblings("section").css({
+        filter: "blur(0px)"
+      });
     });
+
 });
+
+/*if (window.matchMedia("(max-width: 468px)").matches) {
+  $(".choix1>.back").click(function () {
+    ($(this).scrollLeft() + " 300px");
+  });*/

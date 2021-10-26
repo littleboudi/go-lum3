@@ -55,8 +55,6 @@ body {
 
     width: 80%;
     font-size: 1.5rem;
-
-
     font-family: "Exo 2", "Ubuntu", "Helvetica Neue", sans-serif;
 }
 
@@ -88,29 +86,17 @@ body {
 
 }
 
-#jarno .back,
-#claire .back {
-    width: 90%;
-}
-
-
-#axel .back,
-#luca .back,
-#stephane .back {
-    width: 50%;
-
-}
-
-#maryline .back {
-    height: 50%;
-}
 
 .back {
     -ms-transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     font-family: 'Exo 2', sans-serif;
-
+    width: 500px;
+    max-width: 500px;
+    height: 500px;
+    max-height: 500px;
+    color: #4d4e53;
 }
 
 
@@ -118,28 +104,28 @@ body {
 
     -ms-transform: rotateY(360deg) scale(1.2);
     -webkit-transform: rotateY(360deg) scale(1.2);
-    transform: rotateY(360deg) scale(1.7) translateX(30%);
+    transform: rotateY(360deg) scale(1.7);
 }
 
 .backswapdroite {
 
     -ms-transform: rotateY(360deg) scale(1.2);
     -webkit-transform: rotateY(360deg) scale(1.2);
-    transform: rotateY(360deg) scale(1.7) translateX(-25%);
+    transform: rotateY(360deg) scale(1.7) translateX(-60%);
 }
 
 .backswapdroite1 {
 
     -ms-transform: rotateY(360deg) scale(1.2);
     -webkit-transform: rotateY(360deg) scale(1.2);
-    transform: rotateY(360deg) scale(1.7) translateX(-60%);
+    transform: rotateY(360deg) scale(1.7) translateX(-5%);
 }
 
 .backswapcentre {
 
     -ms-transform: rotateY(360deg) scale(1.2);
     -webkit-transform: rotateY(360deg) scale(1.2);
-    transform: rotateY(360deg) scale(1.7) translateX(-25%);
+    transform: rotateY(360deg) scale(1.5) translateX(-25%);
 }
 
 .frontswap {
@@ -147,6 +133,8 @@ body {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(160deg);
 }
+
+
 
 
 
@@ -167,15 +155,16 @@ main {
     grid-template-rows: repeat(5, 1fr);
     gap: 1.5rem;
     margin: 0 auto;
-    padding: 10rem 1.5rem 10rem 1.5rem;
+    padding: 10rem 1.5rem 20rem 1.5rem;
     background-color: #4d4e53;
     overflow: hidden;
 
 }
 
 main:hover {
-    transform: scale(1.01);
-    transition: 1s ease-in-out;
+    transform: scale(1.02);
+    transition: 1s linear;
+    background-color: black;
 }
 
 .container {
@@ -183,12 +172,15 @@ main:hover {
     position: relative;
     -webkit-perspective: 1500px;
     perspective: 1500px;
+
+
 }
 
 .front {
     display: flex;
     background-repeat: no-repeat;
     background-color: black;
+    overflow: hidden;
 }
 
 .front>div:nth-child(1) {
@@ -206,10 +198,7 @@ main:hover {
     font-family: neucha, cursive;
 }
 
-.imgFront {
 
-    height: 100%;
-}
 
 .center {
     display: flex;
@@ -220,6 +209,16 @@ main:hover {
     position: relative;
 }
 
+#imgMarie,
+#imgLuca,
+#imgNicolas,
+#imgMaryline,
+#imgAurelien,
+#imgGuillaume,
+#imgStephane {
+    height: 100%;
+}
+
 /********* FRONT CLAIRE *********/
 #claire>.front {
     background-image: url(./images/montagne/montagne4_4.svg);
@@ -227,21 +226,31 @@ main:hover {
     background-position: center;
 }
 
+
 #paraClaire {
     position: relative;
-    left: -6rem;
+    left: -3.5rem;
     top: -12rem;
 
 }
 
 #bulleClaire {
     transform: scaleX(-1);
-    left: -6.5rem;
+    left: -4rem;
 
+}
+
+#imgClaire {
+    transform: scale(1.8);
 }
 
 
 /********* FRONT LUCA *********/
+#imgLuca {
+    position: relative;
+    transform: scale(1.3);
+}
+
 #luca>.front {
     background-image: url(./images/montagne/montagne3_4.svg);
     background-position: center;
@@ -249,16 +258,17 @@ main:hover {
 }
 
 #bulleLuca {
-    transform: scaleY(-1) rotate(-60deg);
-    width: 400px;
-    max-width: 400px;
-    left: 8rem;
+
+    width: 450px;
+    max-width: 450px;
+    left: 15rem;
+    top: 2rem;
 }
 
 #paraLuca {
     position: relative;
-    top: -17rem;
-    left: 4rem;
+    top: -12rem;
+    left: 10rem;
 
 }
 
@@ -269,24 +279,23 @@ main:hover {
 }
 
 #bulleAxel {
-    transform: scaleY(-1) rotate(45deg);
-    width: 400px;
-    max-width: 400px;
-    left: -18rem;
+
+    width: 450px;
+    max-width: 450px;
+    left: -12rem;
     top: 4rem;
-    z-index: 2;
+
 }
 
 #paraAxel {
     position: relative;
-    left: -21rem;
-    top: -13rem;
-    z-index: 3;
+    left: -12rem;
+    top: -10rem;
+
 }
 
 #imgAxel {
     justify-self: flex-start;
-    z-index: 10;
     width: 100%;
 }
 
@@ -298,19 +307,23 @@ main:hover {
 }
 
 #bulleMarie {
-    width: 280px;
-    max-width: 280px;
+    width: 330px;
+    max-width: 330px;
+    left: -2rem;
+    top: -3rem;
 }
 
 #paraMarie {
     position: relative;
-    top: -10rem;
+    top: -15rem;
     left: 1rem;
 }
 
 #imgMarie {
     position: relative;
-    left: -8rem;
+    left: -16rem;
+    top: -2.5rem;
+    transform: scale(1.2);
 }
 
 
@@ -324,22 +337,22 @@ main:hover {
 
 #bulleJarno {
     transform: scaleX(-1);
-    width: 300px;
-    max-width: 300px;
-    left: -13rem;
-    top: -0.85rem;
-    z-index: 2;
+    width: 450px;
+    max-width: 450px;
+    left: -2rem;
+    top: -5rem;
+
 }
 
 #imgJarno {
-    z-index: 10;
+    position: relative;
+    left: 4rem;
 }
 
 #paraJarno {
     position: relative;
-    left: -12.5rem;
-    top: -14rem;
-    z-index: 3;
+    left: 1rem;
+    top: -22rem;
 }
 
 
@@ -368,53 +381,54 @@ main:hover {
 #alvin>.front {
     background-image: url(./images/montagne/montagne3_4.svg);
     background-position: center;
-    background-size: 200%;
 }
 
 #bulleAlvin {
-    width: 350px;
-    max-width: 350px;
-    z-index: 5;
+    width: 370px;
+    max-width: 370px;
+    left: -5rem;
+    top: -3rem;
 }
 
 #paraAlvin {
     position: relative;
-    left: 3rem;
+    left: 0rem;
     top: -15rem;
-    z-index: 7;
+
 }
 
 #imgAlvin {
-    z-index: 1;
+    position: relative;
+    transform: scale(2.8);
+    top: -5rem;
 }
 
 /********* FRONT MARYLINE *********/
 #maryline>.front {
     background-image: url(./images/montagne/montagne4_4.svg);
     background-position: center;
-    background-size: 200%;
+    background-size: 110%;
 }
 
 #bulleMaryline {
     width: 320px;
     max-width: 320px;
     transform: scaleX(-1);
+    left: 3rem;
+    top: -3rem;
 }
 
 #paraMaryline {
     position: relative;
-    top: -13rem;
-    left: 1rem;
-    z-index: 10;
+    top: -15rem;
+    left: 3rem;
+
 
 }
 
-#maryline .imgFront {
+#imgMaryline {
     position: relative;
-    height: 90%;
-    left: -2rem;
-    z-index: 1;
-
+    left: -8rem;
 }
 
 /********* FRONT AURELIEN *********/
@@ -425,22 +439,19 @@ main:hover {
 }
 
 #bulleAurelien {
-    width: 350px;
-    max-width: 350px;
-    left: -7rem;
-    top: -2rem;
-    z-index: 2;
+    width: 460px;
+    max-width: 460px;
+    left: -3rem;
+    top: -4rem;
+
+    transform: rotate(30deg);
 }
 
 #paraAurelien {
     position: relative;
-    top: -16rem;
-    left: -3rem;
-    z-index: 11;
-}
+    top: -23rem;
+    left: 1rem;
 
-#imgAurelien {
-    z-index: 10;
 }
 
 /********* FRONT GUILLAUME *********/
@@ -453,12 +464,14 @@ main:hover {
 #bulleGuillaume {
     width: 350px;
     max-width: 350px;
+    left: -3rem;
+    top: -4rem;
 }
 
 #paraGuillaume {
     position: relative;
-    top: -15rem;
-    left: 2rem;
+    top: -17rem;
+    left: rem;
 }
 
 #imgGuillaume {
@@ -473,29 +486,27 @@ main:hover {
 }
 
 #bulleStephane {
-    width: 350px;
-    max-width: 350px;
-    top: -2rem;
+    width: 550px;
+    max-width: 550px;
+    top: -5rem;
+    left: -12rem;
+    transform: rotate(-40deg);
 }
 
 #paraStephane {
     position: relative;
-    top: -15rem;
-    left: -5rem;
+    top: -22rem;
+    left: -8rem;
 }
 
 #imgStephane {
     position: relative;
     left: -15rem;
+    top: -4rem;
+    transform: scale(1.3);
 }
 
-
-
-
-
-
-
-/********************************************* COTE BACK PRESENTATION ****************************************/
+/********************************************* COTE BACK ****************************************/
 
 /********************* BACK CARD CHOIX1 **************/
 
@@ -504,7 +515,6 @@ main:hover {
     background-color: #191b1e;
     padding: 2rem;
     color: white;
-    line-height: 1.1rem;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -513,15 +523,9 @@ main:hover {
 .left {
     display: flex;
     align-items: center;
-    width: 65%;
+    line-height: 1.1rem;
     padding: 1rem;
-    text-align: center;
 
-}
-
-#profilClaire {
-    position: relative;
-    left: -7rem;
 }
 
 h1 {
@@ -532,114 +536,80 @@ h1 {
 #claire .left {
     background: url(./images/backCard/profilClaire.svg);
     background-repeat: no-repeat;
+
 }
 
 #luca .left {
     background: url(./images/backCard/profilLuca.svg);
     background-repeat: no-repeat;
-    background-position: right 30%;
 }
-
-#profilLuca {
-    position: relative;
-    top: 6rem;
-}
-
 
 #axel .left {
     background: url(./images/backCard/profilAxel.svg);
     background-repeat: no-repeat;
-    background-position: bottom 10px right 60px;
+    background-position: right 45px top 0px;
+    background-size: 105%;
 }
 
 #marie .left {
     background: url(./images/backCard/profilMarie.svg);
     background-repeat: no-repeat;
-    background-position: right 15px bottom 0px;
-}
-
-#profilMarie,
-#profilJarno {
-    position: relative;
-    top: 6rem;
-    left: -2rem;
+    background-position: right 30px center;
 }
 
 #jarno .left {
     background: url(./images/backCard/profilJarno.svg);
     background-repeat: no-repeat;
-    background-size: 80%;
-
-
-
+    background-size: 350px;
 }
 
 #nicolas .left {
     background: url(./images/backCard/profilNicolas.svg);
     background-repeat: no-repeat;
-
-    background-size: 100%;
-}
-
-#profilnicolas {
-    position: relative;
-    top: 6rem;
+    background-position: right 30px top -7px;
+    background-size: 98%;
 }
 
 #alvin .left {
     background: url(./images/backCard/profilAlvin.svg);
     background-repeat: no-repeat;
-    background-position: right 30px bottom 0px;
+    background-position: right 30px center;
 }
 
 #maryline .left {
     background: url(./images/backCard/profilMaryline.svg);
     background-repeat: no-repeat;
-    background-position: right 15px bottom 0px;
 }
 
-#profilMaryline {
-    position: relative;
-    top: 4rem;
-    left: -1rem;
-}
 
 
 #aurelien .left {
     background: url(./images/backCard/profilAurelien.svg);
     background-repeat: no-repeat;
+    background-size: 350px;
 }
 
-#profilAurelien {
-    position: relative;
-    top: 5rem;
-    left: 1rem;
-}
 
 #guillaume .left {
     background: url(./images/backCard/profilGuillaum.svg);
     background-repeat: no-repeat;
-    background-position: left 30px bottom 0px;
+    background-position: right 0px top -14px;
+    background-size: 98%;
 }
 
-#profilGuillaume {
-    position: relative;
-    top: 5rem;
 
-}
 
 #stephane .left {
     background: url(./images/backCard/profilStephane.svg);
     background-repeat: no-repeat;
-    background-size: 110%;
-
-
+    background-position: right 50px center;
+    background-size: 450px;
 }
 
 
 /**************** DIV DROITE ***********/
 .profil {
-    width: 70%;
+    padding: 3rem;
     margin: 0 auto;
     color: black;
     position: relative;
@@ -657,28 +627,42 @@ h1 {
 
 }
 
+#profilMarie {
+    top: 6rem;
+    left: 0.5rem;
+}
+
+#profilJarno {
+    top: 6rem;
+    left: -1rem;
+
+}
+
 #profilClaire {
-    left: -3.5rem;
+    left: -2.5rem;
     top: 5.5rem;
 }
 
 #profilLuca {
-    left: 2rem;
+    left: -1rem;
+    top: 6rem;
 }
 
 #profilAxel {
     top: 5rem;
-    left: -0.5rem;
-}
-
-#profilMarie {
-    left: 1rem;
+    left: 0rem;
 }
 
 #profilNicolas {
-    top: 4rem;
-    left: 1rem;
+    top: 7rem;
+    left: 0.5rem;
 
+}
+
+#profilAurelien {
+
+    top: 5rem;
+    left: -1rem;
 }
 
 #profilAlvin {
@@ -686,28 +670,33 @@ h1 {
 
 }
 
-#profilMarie {}
+#profilGuillaume {
 
-#profilMarie {}
+    top: 6rem;
+    left: -3rem;
 
-#profilMarie {}
+}
 
-#profilMarie {}
+#profilMaryline {
 
+    top: 6rem;
+    left: -2.5rem;
+}
 
+#profilStephane {
+    top: 5.5rem;
+    left: -1rem;
+}
 
 /********** DIV RIGHT ********/
 
 
 .right {
-    width: 30%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
-    text-align: center;
 }
 
 
@@ -736,7 +725,9 @@ h1 {
 
 #claire {
     width: 622px;
+    max-width: 622PX;
     height: 450px;
+    max-height: 450PX;
 }
 
 #luca {
@@ -780,66 +771,65 @@ h1 {
 /********************************************* MEDIAS QUERIES****************************************/
 @media screen and (max-width:2560px) {
 
-    main {
-        width: 80%;
-    }
 
-    /**************** TRANSLATION ***************/
+    /**************** ANIMATION ***************/
 
     .backswapgauche {
 
-        -ms-transform: rotateY(360deg) scale(1.5);
-        -webkit-transform: rotateY(360deg) scale(1.5);
-        transform: rotateY(360deg) scale(1.7) translateX(50%);
+        -ms-transform: rotateY(360deg) scale(1.2);
+        -webkit-transform: rotateY(360deg) scale(1.2);
+        transform: rotateY(360deg) scale(1.7) translateX(60%);
     }
 
 
     .backswapdroite1 {
 
-        -ms-transform: rotateY(360deg) scale(1.5);
-        -webkit-transform: rotateY(360deg) scale(1.5);
+        -ms-transform: rotateY(360deg) scale(1.2);
+        -webkit-transform: rotateY(360deg) scale(1.2);
         transform: rotateY(360deg) scale(1.7) translateX(-60%);
     }
 
     .backswapcentre,
     .backswapdroite {
 
-        -ms-transform: rotateY(360deg) scale(1.5);
-        -webkit-transform: rotateY(360deg) scale(1.5);
+        -ms-transform: rotateY(360deg) scale(1.2);
+        -webkit-transform: rotateY(360deg) scale(1.2);
         transform: rotateY(360deg) scale(1.7) translateX(-5%);
+    }
+
+    @media screen and (max-width:2084px) {
+
+        /**************** ANIMATION ***************/
+
+        .backswapgauche {
+
+            -ms-transform: rotateY(360deg) scale(1.2);
+            -webkit-transform: rotateY(360deg) scale(1.2);
+            transform: rotateY(360deg) scale(1.7) translateX(40%);
+        }
+
+
+        .backswapdroite1 {
+
+            -ms-transform: rotateY(360deg) scale(1.2);
+            -webkit-transform: rotateY(360deg) scale(1.2);
+            transform: rotateY(360deg) scale(1.7) translateX(-65%);
+        }
+
+        .backswapcentre,
+        .backswapdroite {
+
+            -ms-transform: rotateY(360deg) scale(1.2);
+            -webkit-transform: rotateY(360deg) scale(1.2);
+            transform: rotateY(360deg) scale(1.7) translateX(-25%);
+        }
+
     }
 
     @media screen and (max-width:1440px) {
 
         main {
             width: 90%;
-        }
-
-    }
-
-    @media screen and (min-width:769px) and (max-width:1300px) {
-
-        main {
-            padding: 1rem;
-        }
-
-        #marie {
-            min-width: 230px;
-        }
-
-    }
-
-    @media screen and (max-width:1727px) {
-        #claire {
-            width: 450px;
-            max-width: 450px;
-        }
-
-    }
-
-    @media screen and (min-width:768px) and (max-width:1440px) {
-
-        main {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: repeat(7, 1fr);
@@ -900,117 +890,611 @@ h1 {
 
 
         #claire {
-            width: 660px;
-            max-width: 660px;
+            width: 500px;
+            max-width: 500px;
             height: 400px;
             max-height: 400px;
         }
 
 
-        div>#basDePage {
-            display: inline;
-            text-align: center;
-            padding: 1rem;
+        /**************** ANIMATION ***************/
+        .backswapgauche {
+
+            -ms-transform: rotateY(360deg) scale(1.2);
+            -webkit-transform: rotateY(360deg) scale(1.2);
+            transform: rotateY(360deg) scale(1.2) translateX(35%);
         }
 
-        #basDePage>i {
-            color: white;
-            background-color: #191b1e;
-            margin-top: 1rem;
-            border-radius: 40px;
-            height: 40px;
-            width: 40px;
+
+        .backswapdroite1,
+        .soloNicolas {
+
+            -ms-transform: rotateY(360deg) scale(1.2);
+            -webkit-transform: rotateY(360deg) scale(1.2);
+            transform: rotateY(360deg) scale(1.2) translateX(-35%);
         }
+
+        #nicolas .backswapcentre {
+            transform: rotateY(360deg) scale(1.2) translateX(-44%);
+
+        }
+
+        .backswapcentre,
+        .backswapdroite {
+
+            -ms-transform: rotateY(360deg) scale(1.2);
+            -webkit-transform: rotateY(360deg) scale(1.2);
+            transform: rotateY(360deg) scale(1.2) translateX(35%);
+        }
+
+        /********* FRONT CLAIRE *********/
+
+        #paraClaire {
+            position: relative;
+            left: -3.5rem;
+            top: -10rem;
+
+        }
+
+        /********* FRONT MARYLINE *********/
+
+        #imgMaryline {
+            position: relative;
+            left: -3rem;
+        }
+
+        #bulleMaryline {
+            width: 320px;
+            max-width: 320px;
+            transform: scaleX(-1);
+            left: -1rem;
+            top: -3rem;
+        }
+
 
     }
 
     @media screen and (max-width:1024px) {
+
+        main {
+            padding-bottom: 10rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(7, 1fr);
+            gap: 1rem 1rem;
+            grid-template-areas:
+                "luca luca"
+                "claire marie"
+                "axel axel"
+                "maryline nicolas"
+                "jarno alvin"
+                "aurelien guillaume"
+                "stephane stephane";
+
+        }
+
+        #luca {
+            grid-area: luca;
+        }
+
+        #alvin {
+            grid-area: alvin;
+        }
+
+        #claire {
+            grid-area: claire;
+        }
+
+        #marie {
+            grid-area: marie;
+        }
+
+        #axel {
+            grid-area: axel;
+        }
+
+        #maryline {
+            grid-area: maryline;
+        }
+
+        #nicolas {
+            grid-area: nicolas;
+        }
+
+        #jarno {
+            grid-area: jarno;
+        }
+
+        #aurelien {
+            grid-area: aurelien;
+        }
+
+        #guillaume {
+            grid-area: guillaume;
+        }
+
+        #stephane {
+            grid-area: stephane;
+        }
+
+
         #claire {
             width: 350px;
             max-width: 350px;
+            height: 400px;
+            max-height: 400px;
+        }
 
+        .center>p {
+            font-size: 1rem;
+        }
+
+
+        /**************** ANIMATION ***************/
+
+        .backswapgauche {
+
+            -ms-transform: rotateY(360deg) scale(1.2);
+            -webkit-transform: rotateY(360deg) scale(1.2);
+            transform: rotateY(360deg) scale(1.2) translateX(12%);
+        }
+
+
+        .backswapdroite1 {
+
+            -ms-transform: rotateY(360deg) scale(1.2);
+            -webkit-transform: rotateY(360deg) scale(1.2);
+            transform: rotateY(360deg) scale(1.2) translateX(-42%);
+        }
+
+        .backswapcentre,
+        .backswapdroite {
+
+            -ms-transform: rotateY(360deg) scale(1.2);
+            -webkit-transform: rotateY(360deg) scale(1.2);
+            transform: rotateY(360deg) scale(1.2) translateX(12%);
+        }
+
+        /********* FRONT LUCA*********/
+
+        #luca>.front {
+            background-size: 130%;
+        }
+
+        #bulleLuca {
+            left: 6rem;
+            top: 2rem;
+        }
+
+        #paraLuca {
+            position: relative;
+            top: -12rem;
+            left: 5rem;
 
         }
+
+        /******* FRONT CLAIRE *********/
+        #claire>.front {
+            background-size: 120%;
+        }
+
+
+        #paraClaire {
+
+            left: -0rem;
+            top: -12rem;
+            z-index: 2;
+
+        }
+
+        #bulleClaire {
+            width: 250px;
+            max-width: 250px;
+            left: -2rem;
+            top: -2rem;
+            z-index: 1;
+        }
+
+        #imgClaire {
+            position: relative;
+            transform: scale(2.8);
+            left: 3rem;
+            z-index: 2;
+        }
+
+
+        /********* FRONT MARIE *********/
+        #imgMarie {
+            left: -13rem;
+        }
+
+        #bulleMarie {
+            width: 270px;
+            max-width: 270px;
+        }
+
+        #paraMarie {
+            top: -13rem;
+        }
+
+        #marie>.front {
+            background-size: 130%;
+            background-position: center;
+        }
+
+        /********* FRONT AXEL *********/
+
+        #bulleAxel {
+            width: 350px;
+            max-width: 350px;
+            left: -5rem;
+        }
+
+        #paraAxel {
+            left: -4rem;
+            top: -8rem;
+
+        }
+
+        /********* FRONT MARYLINE *********/
+        #paraMaryline {
+            left: 0.5rem;
+        }
+
+        /********* FRONT NICOLAS *********/
+        #bulleNicolas {
+            left: -7rem;
+        }
+
+        #paraNicolas {
+            left: -1rem;
+        }
+
+        #imgNicolas {
+            position: relative;
+            left: -4rem;
+        }
+
+        /********* FRONT JARNO *********/
+        #bulleJarno {
+            width: 300px;
+            max-width: 300px;
+        }
+
+        #paraJarno {
+            top: -15rem;
+        }
+
+        #imgJarno {
+            transform: scale(1.3);
+            left: 1rem;
+        }
+
+        /********* FRONT ALVIN *********/
+        #bulleAlvin {
+            width: 300px;
+        }
+
+        #imgAlvin {
+            transform: scale(3.2);
+            top: -2rem;
+        }
+
+        /********* FRONT AURELIEN *********/
+        #bulleAurelien {
+            width: 350px;
+            transform: rotate(17deg);
+        }
+
+        #paraAurelien {
+            top: -17rem;
+        }
+
+        /********* FRONT GUILLAUME *********/
+        #bulleGuillaume {
+            left: -7rem;
+        }
+
+        /********* FRONT STEPHANE *********/
+        #bulleStephane {
+            width: 380px;
+            left: -1rem;
+        }
+
+        #paraStephane {
+            top: -17rem;
+            left: -1rem;
+        }
+
+
+        /********* BAS DE PAGE *********/
+        div>#basDePage {
+            display: none;
+        }
+
+
+
+
     }
+
+
 
     @media screen and (max-width:768px) {
 
-        #content {
-            width: 100%;
+
+        #presentation,
+        #implication {
+            width: 90%;
             text-align: justify;
+            font-size: 1rem;
         }
+
+        #implication {
+            padding-bottom: 4rem;
+        }
+
+        #content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            font-size: 0.9rem;
+        }
+
+
 
         main {
             width: 90%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 1rem;
-            font-size: 0.3rem;
+            padding: 3rem 1rem 3rem 1rem;
+            font-size: 1rem;
+        }
+
+        .front p {
+            font-size: 1.2rem;
+        }
+
+        .profil>h1 {
+            font-size: 1.2rem;
+        }
+
+        div>#basDePage {
+            position: relative;
+            top: 3rem;
+        }
+
+        main:hover {
+            padding-bottom: 15rem;
+            transition: 1s ease-in;
+
         }
 
         .container,
         #claire {
-            width: 470px;
-            max-width: 470px;
-            height: 470px;
-            max-height: 470px;
+            width: 600px;
+            max-width: 600px;
+            height: 500px;
+            max-height: 500px;
         }
-
-        #bulle {
-            width: 250px;
-        }
-
-        .back {
-            width: 100%;
-            height: 100%;
-            box-sizing: border-box;
-            border: 2px solid red;
-        }
-
 
         .backswapgauche {
-            max-width: 470px;
-            max-height: 470px;
+            max-width: 600px;
+            max-height: 600px;
             -ms-transform: rotateY(360deg);
             -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
+            transform: rotateY(360deg) scale(1.2) translateX(2.5%);
         }
 
 
         .backswapdroite1 {
-            max-width: 470px;
-            max-height: 470px;
+            max-width: 600px;
+            max-height: 600px;
             -ms-transform: rotateY(360deg) scale(1.5);
             -webkit-transform: rotateY(360deg) scale(1.5);
-            transform: rotateY(360deg);
+            transform: rotateY(360deg) scale(1.2);
         }
 
         .backswapcentre,
         .backswapdroite {
-            max-width: 470px;
-            max-height: 470px;
+            max-width: 600px;
+            max-height: 600px;
             -ms-transform: rotateY(360deg) scale(1.5);
             -webkit-transform: rotateY(360deg) scale(1.5);
-            transform: rotateY(360deg);
+            transform: rotateY(360deg) scale(1.2) translateX(2.5%);
+        }
+
+        /***************** FRONT CARD ********************/
+        /********* FRONT CLAIRE *********/
+        #imgClaire {
+            transform: scale(1.7);
+        }
+
+        #paraClaire {
+            left: -3rem;
+        }
+
+        /********* FRONT LUCA *********/
+        #imgLuca {
+            position: relative;
+            transform: scale(1.2);
+            left: -5rem;
+        }
+
+        #bulleLuca {
+
+            width: 350px;
+            max-width: 350px;
+            left: 0rem;
+            top: 0rem;
+            transform: rotate(10deg);
+        }
+
+        #paraLuca {
+            position: relative;
+            top: -12rem;
+            left: -1rem;
+
+        }
+
+        #luca>.front {
+            background-size: 180%;
+        }
+
+        /********* FRONT AXEL *********/
+        #axel>.front {
+            background-size: 130%;
+            background-position: center;
+        }
+
+        #bulleAxel {
+            width: 350px;
+            max-width: 350px;
+            left: -3rem;
+        }
+
+        #paraAxel {
+            position: relative;
+            left: 1rem;
+            top: -7rem;
+
+        }
+
+        /********* FRONT MARIE *********/
+        #marie>.front {
+            background-position: center;
+            background-size: 130%;
+        }
+
+        #bulleMarie {
+            width: 300px;
+            max-width: 300px;
+        }
+
+        #paraMarie {
+            position: relative;
+            top: -15rem;
+            left: -2rem;
+        }
+
+        #imgMarie {
+            position: relative;
+            left: -16rem;
+            top: -2.5rem;
+            transform: scale(1.2);
+        }
+
+        /********* FRONT MARYLINE *********/
+        #maryline>.front {
+            background-size: 130%;
+        }
+
+        #paraMaryline {
+            left: 0rem;
+        }
+
+        /********* FRONT NICOLAS *********/
+
+        #nicolas>.front {
+            background-size: 130%;
+        }
+
+        /********* FRONT ALVIN *********/
+        #alvin>.front {
+            background-size: 160%;
+        }
+
+        #paraAlvin {
+            left: 1rem;
+        }
+
+        #imgAlvin {
+            transform: scale(2.4);
+            top: -7rem;
+            z-index: 11;
+        }
+
+        #bulleAlvin {
+            width: 350px;
+            max-width: 350px;
+            left: 0.5rem;
+            z-index: 1;
+        }
+
+        #paraAlvin {
+            top: -16rem;
+            left: 2rem;
+            z-index: 1;
+        }
+
+        /********* FRONT JARNO *********/
+
+        #bulleJarno {
+            width: 330px;
+            max-width: 330px;
+            z-index: 1;
+        }
+
+        #paraJarno {
+            top: -17rem;
+            left: 0rem;
+            z-index: 1;
+
+        }
+
+        #imgJarno {
+            z-index: 20;
+        }
+
+        /********* FRONT AURELIEN *********/
+
+        #aurelien>.front {
+
+            background-size: 130%;
+        }
+
+        #bulleAurelien {
+            width: 360px;
+            max-width: 360px;
+        }
+
+        #paraAurelien {
+            top: -18rem;
+            left: -1rem;
+        }
+
+        /********* FRONT GUILLAUME *********/
+
+        #paraGuillaume {
+            left: -1rem;
+        }
+
+        /********* FRONT STEPHANE *********/
+
+        #stephane>.front {
+            background-size: 130%;
+        }
+
+        #bulleStephane {
+            width: 300px;
+            max-width: 300px;
+            top: -3rem;
+            left: 3rem;
+            transform: rotate(-10deg);
+        }
+
+        #paraStephane {
+            top: -12rem;
+            left: 3rem;
+        }
+
+        #imgStephane {
+            left: -17rem;
+            transform: scale(1.16);
         }
 
 
-        div>#basDePage {
-            display: inline;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        #basDePage>i {
-            color: white;
-            background-color: #191b1e;
-            margin-top: 1rem;
-            border-radius: 40px;
-            height: 40px;
-            width: 40px;
-        }
-
+        /***************** BACk CARD ********************/
 
         .temoignage,
         .parcours {
@@ -1024,92 +1508,22 @@ h1 {
             height: 100px;
         }
 
-    }
-
-    @media screen and (max-width:468px) {
-
-
-        #content {
-            width: 100%;
-            text-align: justify;
+        #profilNicolas {
+            top: 4rem;
         }
 
-        main {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 3rem 0 3rem 0;
-        }
-
-        .container,
-        #claire {
-            width: 430px;
-            max-width: 430px;
-            height: 430px;
-            max-height: 430px;
-        }
-
-        .back {
-            width: 100%;
-            height: 100%;
-            box-sizing: border-box;
+        #profilGuillaume {
+            top: 4rem;
+            left: -2rem;
 
         }
 
-        .choix1>.back,
-        .choix2>.back {
-            line-height: 1.1;
-        }
-
-        .choix1 .left>div>img {
-
-            width: 400px;
-            height: 400px;
-            border: 2px solid yellow;
-            position: relative;
-            left: -4.5rem;
-            top: -3rem;
-        }
-
-        .choix2 .left>div>img {
-
-            width: 380px;
-            height: 380px;
-            border: 2px solid green;
-            position: relative;
-            left: 2rem;
-
-        }
-
-        .profil {
-            border: 2px solid orange;
-            padding: 0;
-        }
-
-        .profil>.temoignage {
-            font-size: 0.7rem;
-            padding: 0;
-            border: 1px solid purple;
-            width: 100%;
-        }
-
-        .main_white {
-            background-color: white;
-        }
-
-
-
-
-
-
-
-
+        /***************** BAS DE PAGE ********************/
         div>#basDePage {
             display: inline;
             text-align: center;
-            padding: 1rem;
         }
+
 
         #basDePage>i {
             color: white;
@@ -1120,6 +1534,494 @@ h1 {
             width: 40px;
         }
 
+    }
+
+    @media screen and (max-width:468px) {
+
+        #presentation,
+        #implication {
+            font-size: 0.7rem;
+        }
+
+        #goLum {
+            font-size: 3rem;
+        }
+
+        main {
+            width: 90%;
+            margin: 0 auto;
+            padding: 0;
+
+        }
+
+        .container,
+        #claire {
+            width: 450px;
+            max-width: 450px;
+            height: 500px;
+            max-height: 500px;
+        }
+
+        .backswapgauche {
+            max-width: 500px;
+            max-height: 5000px;
+            -ms-transform: rotateY(360deg);
+            -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+        }
+
+
+        .backswapdroite1 {
+            max-width: 500px;
+            max-height: 500px;
+            -ms-transform: rotateY(360deg);
+            -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+        }
+
+        .backswapcentre,
+        .backswapdroite {
+            max-width: 500px;
+            max-height: 500px;
+            -ms-transform: rotateY(360deg);
+            -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg) scale(1.2);
+        }
+
+
+        .profil {
+            padding: 0rem;
+            font-size: 0.6rem;
+        }
+
+
+        .profil>.temoignage {
+            font-size: 0.6rem;
+            padding: 0;
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+            line-height: 1.3rem;
+            padding: 3rem;
+        }
+
+        #nicolas .backswapcentre {
+
+            transform: rotateY(360deg) scale(1.2) translateX(-2.5%);
+        }
+
+        /***************** FRONT CARD *************/
+
+        /********* FRONT CLAIRE *********/
+
+        #imgClaire {
+            transform: scale(2.5);
+        }
+
+        #paraClaire {
+            left: -1rem;
+        }
+
+        /********* FRONT LUCA *********/
+
+
+        #bulleLuca {
+            left: -6rem;
+        }
+
+        #paraLuca {
+            left: -3rem;
+
+        }
+
+        /********* FRONT AXEL *********/
+        #axel>.front {
+            background-size: 160%;
+        }
+
+        #bulleAxel {
+            width: 350px;
+            max-width: 350px;
+            left: -3rem;
+        }
+
+        #paraAxel {
+            left: 2rem;
+        }
+
+        #imgAxel {
+            transform: scale(1.8);
+
+        }
+
+        /********* FRONT MARIE *********/
+
+        #paraMarie {
+            position: relative;
+            top: -15rem;
+            left: 1rem;
+        }
+
+        #imgMarie {
+
+            left: -12rem;
+            top: -2.5rem;
+            transform: scale(1.2);
+        }
+
+        /********* FRONT MARYLINE *********/
+        #imgMaryline {
+            transform: scale(1.3);
+        }
+
+        #paraMaryline {
+            left: 1rem;
+        }
+
+        /********* FRONT ALVIN *********/
+
+        #paraAlvin {
+            left: 1rem;
+        }
+
+        #imgAlvin {
+            transform: scale(3);
+            top: -4rem;
+            left: 2rem;
+
+        }
+
+        #bulleAlvin {
+            left: -6rem;
+        }
+
+        #paraAlvin {
+            left: 0rem;
+        }
+
+        /********* FRONT AURELIEN *********/
+        #paraAurelien {
+            left: 0rem;
+        }
+
+        /********* FRONT GUILLAUME *********/
+        #paraGuillaume {
+            left: 0rem;
+        }
+
+        #bulleGuillaume {
+            left: -6rem;
+            top: -5rem;
+        }
+
+        /********* FRONT STEPHANE*********/
+        #paraStephane {
+            left: -2rem;
+        }
+
+        #bulleStephane {
+            left: -5rem;
+        }
+
+        /********* BAS DE PAGE *********/
+        div>#basDePage {
+            top: 0rem;
+        }
+
+        #basDePage:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+    }
+
+    @media screen and (max-width:425px) {
+        .center>p {
+            font-size: 0.8rem;
+        }
+
+        .choix1>.back {
+            padding: 1rem;
+        }
+
+        .left {
+            padding: 3.5rem;
+        }
+    }
+
+    @media screen and (max-width:320px) {
+
+        main:hover {
+            padding-bottom: 5rem;
+        }
+
+
+
+        #goLum {
+            font-size: 2rem;
+        }
+
+
+        .container,
+        #claire {
+            width: 300px;
+            max-width: 300px;
+        }
+
+        .choix1>.back {
+            padding: 0rem;
+        }
+
+        .left {
+            line-height: 1rem;
+
+        }
+
+        #jarno .left,
+        #aurelien .left {
+            background-size: 90%;
+        }
+
+        #stephane .left {
+            background-size: 110%;
+        }
+
+        .backswapgauche {
+            max-width: 450px;
+            max-height: 450px;
+            -ms-transform: rotateY(360deg);
+            -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+        }
+
+
+        .backswapdroite1 {
+            max-width: 450px;
+            max-height: 450px;
+            -ms-transform: rotateY(360deg);
+            -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+        }
+
+        .backswapcentre,
+        .backswapdroite {
+            max-width: 450px;
+            max-height: 450px;
+            -ms-transform: rotateY(360deg);
+            -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+        }
+
+        /********* FRONT CLAIRE *********/
+        #imgClaire {
+            transform: scale(2.9);
+
+        }
+
+        #paraClaire {
+            left: 0rem;
+        }
+
+        /********* FRONT LUCA *********/
+
+        #imgLuca {
+            transform: scale(1);
+            left: -7rem;
+            top: -3rem;
+            z-index: 1;
+        }
+
+
+        #bulleLuca {
+            left: -10rem;
+            top: -2rem;
+            z-index: 2;
+        }
+
+        #paraLuca {
+            left: -2rem;
+            z-index: 2;
+        }
+
+        /********* FRONT MARIE *********/
+
+        #paraMarie {
+            position: relative;
+            top: -15rem;
+            left: -1rem;
+        }
+
+        #imgMarie {
+            left: -15rem;
+            transform: scale(1);
+        }
+
+        #bulleMarie {
+            left: -8rem;
+        }
+
+        /********* FRONT MARYLINE *********/
+        #imgMaryline {
+            transform: scale(1);
+            left: -6rem;
+        }
+
+        #paraMaryline {
+            left: 1rem;
+        }
+
+        #bulleMaryline {
+            top: -4rem;
+        }
+
+        /********* FRONT ALVIN *********/
+
+        #paraAlvin {
+            left: 1rem;
+        }
+
+        #imgAlvin {
+            transform: scale(3);
+            top: -4rem;
+            left: 2rem;
+
+        }
+
+        #bulleAlvin {
+            left: -6rem;
+        }
+
+        #paraAlvin {
+            left: 0rem;
+        }
+
+        /********* FRONT AURELIEN *********/
+        #paraAurelien {
+            left: 0rem;
+        }
+
+        /********* FRONT GUILLAUME *********/
+        #paraGuillaume {
+            left: 0rem;
+        }
+
+        #bulleGuillaume {
+            left: -6rem;
+            top: -5rem;
+        }
+
+        /********* FRONT NICOLAS*********/
+
+        #imgNicolas {
+            position: relative;
+            transform: scale(0.8);
+            left: -4rem;
+        }
+
+        #bulleNicolas {
+            width: 250px;
+            max-width: 250px;
+            left: -5rem;
+            top: -3rem;
+
+        }
+
+        #paraNicolas {
+            top: -12rem;
+            left: -1rem;
+        }
+
+        /********* FRONT ALVIN*********/
+        #imgAlvin {
+            transform: scale(3.5);
+            top: -1rem;
+
+        }
+
+        #bulleAlvin {
+            width: 250px;
+            max-width: 250px;
+            left: 0rem;
+        }
+
+        #paraAlvin {
+            left: 3rem;
+            top: -13rem;
+        }
+
+        /********* FRONT JARNO *********/
+        #imgJarno {
+            transform: scale(1.4);
+            left: 2rem;
+        }
+
+        #bullejarno {
+            left: 1rem;
+        }
+
+        /********* FRONT AURELIEN *********/
+        #imgAurelien {
+            position: relative;
+            transform: scale(0.8);
+            left: -2rem;
+            top: -2rem;
+            z-index: 2;
+
+        }
+
+        #bulleAurelien {
+            width: 300px;
+            max-width: 300px;
+            top: 0rem;
+            left: -2rem;
+            z-index: 1;
+        }
+
+        #paraAurelien {
+            z-index: 1;
+
+            top: -12rem;
+        }
+
+        /********* FRONT GUILLAUME*********/
+
+        #bulleGuillaume {
+            width: 300px;
+            max-width: 300px;
+        }
+
+        #imgGuillaume {
+            transform: scale(0.8);
+            left: -6.5rem;
+        }
+
+        #paraGuillaume {
+            top: -14rem;
+        }
+
+        /********* FRONT STEPHANE*********/
+        #paraStephane {
+            left: -1rem;
+        }
+
+        #bulleStephane {
+            left: -8rem;
+        }
+
+        #imgStephane {
+            transform: scale(0.9);
+        }
+
+        #stephane>.front {
+            background-size: 150%;
+
+        }
+
+        #basDePage {
+            padding-top: 10rem;
+        }
 
 
     }
