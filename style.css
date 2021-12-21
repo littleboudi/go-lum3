@@ -29,6 +29,16 @@ body {
     padding-top: 11rem;
 }
 
+/*design des 3points entre crochets*/
+.suite {
+    color: #da5e3a;
+    text-decoration: none;
+    background-color: transparent;
+    font-style: italic;
+    line-height: 1.3;
+    cursor: pointer;
+}
+
 /************************************** Paragraphe de présentation  ****************************************/
 #golum,
 #presentation,
@@ -134,10 +144,6 @@ body {
     transform: rotateY(160deg);
 }
 
-
-
-
-
 div>#basDePage {
     display: none;
 
@@ -188,6 +194,11 @@ main:hover {
 }
 
 /*********************************************** CARD FRONT ****************************************/
+/* les spans qui mettent en gras le nom et le prénom*/
+.gras {
+    font-weight: bolder;
+}
+
 .front>div {
     width: 50%;
 }
@@ -198,18 +209,21 @@ main:hover {
     font-family: neucha, cursive;
 }
 
-
-
 .center {
     display: flex;
     flex-direction: column;
+
+}
+
+.center>p {
+    font-size: 1.2rem;
 }
 
 .bulle {
     position: relative;
 }
 
-#imgMarie,
+#img,
 #imgLuca,
 #imgNicolas,
 #imgMaryline,
@@ -229,12 +243,13 @@ main:hover {
 
 #paraClaire {
     position: relative;
-    left: -3.5rem;
-    top: -12rem;
+    left: -2rem;
+    top: -16rem;
 
 }
 
 #bulleClaire {
+    width: 370px;
     transform: scaleX(-1);
     left: -4rem;
 
@@ -272,6 +287,10 @@ main:hover {
 
 }
 
+#imgLuca {
+    left: -6rem;
+}
+
 /********* FRONT AXEL *********/
 #axel>.front {
     background-image: url(./images/montagne/montagne1_6.svg);
@@ -296,7 +315,7 @@ main:hover {
 
 #imgAxel {
     justify-self: flex-start;
-    width: 100%;
+    width: 101%;
 }
 
 /********* FRONT MARIE *********/
@@ -315,15 +334,15 @@ main:hover {
 
 #paraMarie {
     position: relative;
-    top: -15rem;
+    top: -16rem;
     left: 1rem;
 }
 
 #imgMarie {
     position: relative;
-    left: -16rem;
-    top: -2.5rem;
-    transform: scale(1.2);
+    left: -6rem;
+    top: 5rem;
+    transform: scale(2);
 }
 
 
@@ -364,15 +383,16 @@ main:hover {
 }
 
 #bulleNicolas {
-    width: 300px;
-    max-width: 300px;
+    width: 395px;
+    max-width: 395px;
+    left: -2rem;
 
 }
 
 #paraNicolas {
     position: relative;
-    top: -11rem;
-    left: 1rem;
+    top: -16rem;
+    left: 2rem;
 
 }
 
@@ -393,14 +413,17 @@ main:hover {
 #paraAlvin {
     position: relative;
     left: 0rem;
-    top: -15rem;
+    top: -18rem;
 
 }
 
 #imgAlvin {
     position: relative;
-    transform: scale(2.8);
-    top: -5rem;
+    transform: scale(0.46);
+    left: -50rem;
+    top: -19rem;
+
+
 }
 
 /********* FRONT MARYLINE *********/
@@ -408,27 +431,29 @@ main:hover {
     background-image: url(./images/montagne/montagne4_4.svg);
     background-position: center;
     background-size: 110%;
+
 }
 
 #bulleMaryline {
-    width: 320px;
-    max-width: 320px;
+    width: 400px;
+    max-width: 400px;
     transform: scaleX(-1);
-    left: 3rem;
+    left: 0rem;
     top: -3rem;
 }
 
 #paraMaryline {
     position: relative;
-    top: -15rem;
-    left: 3rem;
+    top: -20rem;
+    left: 1rem;
 
 
 }
 
 #imgMaryline {
     position: relative;
-    left: -8rem;
+    left: -38rem;
+    transform: scale(0.8);
 }
 
 /********* FRONT AURELIEN *********/
@@ -462,21 +487,22 @@ main:hover {
 }
 
 #bulleGuillaume {
-    width: 350px;
-    max-width: 350px;
+    width: 380px;
+    max-width: 380px;
     left: -3rem;
-    top: -4rem;
+    top: -2rem;
 }
 
 #paraGuillaume {
     position: relative;
     top: -17rem;
-    left: rem;
+    left: 1rem;
+
 }
 
 #imgGuillaume {
     position: relative;
-    left: -4rem;
+    left: -13rem;
 }
 
 /********* FRONT STEPHANE *********/
@@ -495,7 +521,7 @@ main:hover {
 
 #paraStephane {
     position: relative;
-    top: -22rem;
+    top: -27rem;
     left: -8rem;
 }
 
@@ -534,21 +560,24 @@ h1 {
 }
 
 #claire .left {
-    background: url(./images/backCard/profilClaire.svg);
+    background: url(./images/backCard/claireprofil.png);
     background-repeat: no-repeat;
+    background-size: 80%;
 
 }
 
 #luca .left {
-    background: url(./images/backCard/profilLuca.svg);
+    background: url(./images/backCard/lucaprofil.png);
     background-repeat: no-repeat;
+    background-size: 82%;
+    background-position: left 2px center;
 }
 
 #axel .left {
-    background: url(./images/backCard/profilAxel.svg);
+    background: url(./images/backCard/axelprofil.png);
     background-repeat: no-repeat;
     background-position: right 45px top 0px;
-    background-size: 105%;
+    background-size: 80%;
 }
 
 #marie .left {
@@ -571,17 +600,17 @@ h1 {
 }
 
 #alvin .left {
-    background: url(./images/backCard/profilAlvin.svg);
+    background: url(./images/backCard/alvinprofil1.png);
     background-repeat: no-repeat;
     background-position: right 30px center;
+    background-size: 80%;
 }
 
 #maryline .left {
-    background: url(./images/backCard/profilMaryline.svg);
+    background: url(./images/backCard/marylineprofil.png);
     background-repeat: no-repeat;
+    background-size: 80%;
 }
-
-
 
 #aurelien .left {
     background: url(./images/backCard/profilAurelien.svg);
@@ -591,13 +620,11 @@ h1 {
 
 
 #guillaume .left {
-    background: url(./images/backCard/profilGuillaum.svg);
+    background: url(./images/backCard/guillaumeprofil.png);
     background-repeat: no-repeat;
-    background-position: right 0px top -14px;
-    background-size: 98%;
+    background-position: top -14px;
+    background-size: 80%;
 }
-
-
 
 #stephane .left {
     background: url(./images/backCard/profilStephane.svg);
@@ -644,7 +671,7 @@ h1 {
 }
 
 #profilLuca {
-    left: -1rem;
+    left: -2rem;
     top: 6rem;
 }
 
@@ -830,6 +857,7 @@ h1 {
 
         main {
             width: 90%;
+
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: repeat(7, 1fr);
@@ -848,10 +876,6 @@ h1 {
             grid-area: luca;
         }
 
-        #alvin {
-            grid-area: alvin;
-        }
-
         #claire {
             grid-area: claire;
         }
@@ -864,7 +888,7 @@ h1 {
             grid-area: axel;
         }
 
-        #maryline {
+        #Maryline {
             grid-area: maryline;
         }
 
@@ -876,8 +900,12 @@ h1 {
             grid-area: jarno;
         }
 
-        #aurelien {
-            grid-area: aurelien;
+        #alvin {
+            grid-area: alvin;
+        }
+
+        #Aurélien {
+            grid-area: Aurélien;
         }
 
         #guillaume {
@@ -896,6 +924,9 @@ h1 {
             max-height: 400px;
         }
 
+        .center>p {
+            font-size: 1.2rem;
+        }
 
         /**************** ANIMATION ***************/
         .backswapgauche {
@@ -931,16 +962,37 @@ h1 {
 
         #paraClaire {
             position: relative;
-            left: -3.5rem;
-            top: -10rem;
+            left: -1rem;
+            top: -16rem;
 
+        }
+
+        /********* FRONT MARIE *********/
+
+        #imgMarie {
+            position: relative;
+            transform: scale(1.6);
+            top: 3rem;
+            left: -4rem;
+        }
+
+        #paraMarie {
+            top: -16rem;
+            left: 0rem;
         }
 
         /********* FRONT MARYLINE *********/
 
         #imgMaryline {
             position: relative;
-            left: -3rem;
+            left: -12rem;
+            top: 0rem;
+            transform: scale(1.1);
+        }
+
+        #paraMaryline {
+            position: relative;
+            top: -16rem;
         }
 
         #bulleMaryline {
@@ -949,6 +1001,31 @@ h1 {
             transform: scaleX(-1);
             left: -1rem;
             top: -3rem;
+        }
+
+        #maryline>.front {
+            background-size: 120%;
+            height: 400px;
+        }
+
+        /********* FRONT AXEL *********/
+
+        #imgAxel {
+            transform: scale(1.2);
+        }
+
+        /********* FRONT ALVIN *********/
+        #imgAlvin {
+            position: relative;
+            transform: scale(0.4);
+            top: -22rem;
+
+        }
+
+        /********* FRONT GUILLAUME *********/
+
+        #paraGuillaume {
+            top: -17rem;
         }
 
 
@@ -1073,6 +1150,10 @@ h1 {
 
         }
 
+        #imgLuca {
+            left: -8rem;
+        }
+
         /******* FRONT CLAIRE *********/
         #claire>.front {
             background-size: 120%;
@@ -1082,14 +1163,14 @@ h1 {
         #paraClaire {
 
             left: -0rem;
-            top: -12rem;
+            top: -13rem;
             z-index: 2;
 
         }
 
         #bulleClaire {
             width: 250px;
-            max-width: 250px;
+
             left: -2rem;
             top: -2rem;
             z-index: 1;
@@ -1103,9 +1184,11 @@ h1 {
         }
 
 
-        /********* FRONT MARIE *********/
+        /********* FRONT MARIE*********/
         #imgMarie {
-            left: -13rem;
+            left: -7rem;
+            top: 6rem;
+            transform: scale(2.5);
         }
 
         #bulleMarie {
@@ -1131,15 +1214,36 @@ h1 {
         }
 
         #paraAxel {
-            left: -4rem;
-            top: -8rem;
+            left: -3rem;
+            top: -6rem;
 
+        }
+
+        #imgAxel {
+            position: relative;
+            transform: scale(1.2);
+            left: 5rem;
         }
 
         /********* FRONT MARYLINE *********/
         #paraMaryline {
-            left: 0.5rem;
+            left: 0rem;
         }
+
+        #bulleMaryline {
+            position: relative;
+            left: -2rem;
+            z-index: 0;
+        }
+
+        #imgMaryline {
+            left: -15rem;
+            top: 0rem;
+            transform: scale(1);
+            z-index: 1;
+        }
+
+
 
         /********* FRONT NICOLAS *********/
         #bulleNicolas {
@@ -1147,7 +1251,7 @@ h1 {
         }
 
         #paraNicolas {
-            left: -1rem;
+            left: 0.5rem;
         }
 
         #imgNicolas {
@@ -1163,11 +1267,12 @@ h1 {
 
         #paraJarno {
             top: -15rem;
+            left: 0rem;
         }
 
         #imgJarno {
             transform: scale(1.3);
-            left: 1rem;
+
         }
 
         /********* FRONT ALVIN *********/
@@ -1176,8 +1281,11 @@ h1 {
         }
 
         #imgAlvin {
-            transform: scale(3.2);
-            top: -2rem;
+            top: -22rem;
+        }
+
+        #paraAlvin {
+            top: -15rem;
         }
 
         /********* FRONT AURELIEN *********/
@@ -1193,6 +1301,10 @@ h1 {
         /********* FRONT GUILLAUME *********/
         #bulleGuillaume {
             left: -7rem;
+        }
+
+        #paraGuillaume {
+            top: -19rem;
         }
 
         /********* FRONT STEPHANE *********/
@@ -1212,12 +1324,7 @@ h1 {
             display: none;
         }
 
-
-
-
     }
-
-
 
     @media screen and (max-width:768px) {
 
@@ -1238,6 +1345,10 @@ h1 {
             flex-direction: column;
             width: 100%;
             font-size: 0.9rem;
+        }
+
+        .choix1>.back {
+            margin-left: 1.2rem;
         }
 
 
@@ -1278,6 +1389,7 @@ h1 {
             max-height: 500px;
         }
 
+
         .backswapgauche {
             max-width: 600px;
             max-height: 600px;
@@ -1304,6 +1416,12 @@ h1 {
             transform: rotateY(360deg) scale(1.2) translateX(2.5%);
         }
 
+        #nicolas .backswapcentre {
+
+            transform: rotateY(360deg);
+        }
+
+
         /***************** FRONT CARD ********************/
         /********* FRONT CLAIRE *********/
         #imgClaire {
@@ -1311,14 +1429,19 @@ h1 {
         }
 
         #paraClaire {
-            left: -3rem;
+            left: -2rem;
+            top: -15rem;
+        }
+
+        #bulleClaire {
+            width: 300px;
         }
 
         /********* FRONT LUCA *********/
         #imgLuca {
             position: relative;
             transform: scale(1.2);
-            left: -5rem;
+            left: -20rem;
         }
 
         #bulleLuca {
@@ -1367,36 +1490,50 @@ h1 {
         }
 
         #bulleMarie {
-            width: 300px;
-            max-width: 300px;
+            width: 320px;
+            max-width: 320px;
+            left: 1rem;
         }
 
         #paraMarie {
             position: relative;
-            top: -15rem;
-            left: -2rem;
+            top: -15.5rem;
+            left: 1rem;
         }
 
         #imgMarie {
             position: relative;
-            left: -16rem;
-            top: -2.5rem;
-            transform: scale(1.2);
+            left: -8rem;
+            top: 4rem;
+            transform: scale(1.9);
         }
 
         /********* FRONT MARYLINE *********/
         #maryline>.front {
+            background-position: center;
             background-size: 130%;
         }
 
+        #imgMaryline {
+            left: -18rem;
+        }
+
         #paraMaryline {
-            left: 0rem;
+            left: -1rem;
+        }
+
+        #maryline>.front {
+            height: 500px;
         }
 
         /********* FRONT NICOLAS *********/
 
         #nicolas>.front {
             background-size: 130%;
+        }
+
+        #bulleNicolas {
+            left: -2rem;
         }
 
         /********* FRONT ALVIN *********/
@@ -1409,30 +1546,32 @@ h1 {
         }
 
         #imgAlvin {
-            transform: scale(2.4);
-            top: -7rem;
+            transform: scale(0.5);
+            top: -18rem;
+            left: -45rem;
             z-index: 11;
         }
 
         #bulleAlvin {
             width: 350px;
             max-width: 350px;
-            left: 0.5rem;
+            left: 2rem;
             z-index: 1;
         }
 
         #paraAlvin {
             top: -16rem;
-            left: 2rem;
+            left: 3rem;
             z-index: 1;
         }
 
         /********* FRONT JARNO *********/
 
         #bulleJarno {
-            width: 330px;
-            max-width: 330px;
+            width: 350px;
+            max-width: 350px;
             z-index: 1;
+            top: -1rem;
         }
 
         #paraJarno {
@@ -1444,6 +1583,8 @@ h1 {
 
         #imgJarno {
             z-index: 20;
+            transform: scale(0.9);
+            left: 3rem;
         }
 
         /********* FRONT AURELIEN *********/
@@ -1466,7 +1607,11 @@ h1 {
         /********* FRONT GUILLAUME *********/
 
         #paraGuillaume {
-            left: -1rem;
+            left: 3rem;
+        }
+
+        #bulleGuillaume {
+            left: 1rem;
         }
 
         /********* FRONT STEPHANE *********/
@@ -1476,16 +1621,16 @@ h1 {
         }
 
         #bulleStephane {
-            width: 300px;
-            max-width: 300px;
+            width: 330px;
+            max-width: 330px;
             top: -3rem;
-            left: 3rem;
+            left: -2rem;
             transform: rotate(-10deg);
         }
 
         #paraStephane {
-            top: -12rem;
-            left: 3rem;
+            top: -16rem;
+            left: 0rem;
         }
 
         #imgStephane {
@@ -1538,6 +1683,49 @@ h1 {
 
     @media screen and (max-width:468px) {
 
+        .choix1>.back {
+            width: 75%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow-y: scroll;
+            margin-left: 1.2rem;
+            border: 2px solid orange;
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+            line-height: 1rem;
+            border: 2px solid red;
+            transform: scale(1.1);
+
+
+
+        }
+
+        .right {
+
+            width: 100%;
+            margin-top: 5rem;
+            border: 2px solid green;
+        }
+
+
+        .profil {
+
+            padding: 2rem;
+            font-size: 0.6rem;
+        }
+
+
+        .profil>.temoignage {
+
+            font-size: 0.5rem;
+            padding: 0;
+        }
+
         #presentation,
         #implication {
             font-size: 0.7rem;
@@ -1554,6 +1742,10 @@ h1 {
 
         }
 
+        .center>p {
+            font-size: 0.8rem;
+        }
+
         .container,
         #claire {
             width: 450px;
@@ -1564,7 +1756,7 @@ h1 {
 
         .backswapgauche {
             max-width: 500px;
-            max-height: 5000px;
+            max-height: 500px;
             -ms-transform: rotateY(360deg);
             -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
@@ -1585,31 +1777,12 @@ h1 {
             max-height: 500px;
             -ms-transform: rotateY(360deg);
             -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg) scale(1.2);
-        }
-
-
-        .profil {
-            padding: 0rem;
-            font-size: 0.6rem;
-        }
-
-
-        .profil>.temoignage {
-            font-size: 0.6rem;
-            padding: 0;
-        }
-
-        .left {
-            display: flex;
-            align-items: center;
-            line-height: 1.3rem;
-            padding: 3rem;
+            transform: rotateY(360deg);
         }
 
         #nicolas .backswapcentre {
 
-            transform: rotateY(360deg) scale(1.2) translateX(-2.5%);
+            transform: rotateY(360deg);
         }
 
         /***************** FRONT CARD *************/
@@ -1628,11 +1801,15 @@ h1 {
 
 
         #bulleLuca {
-            left: -6rem;
+            left: 0rem;
         }
 
         #paraLuca {
-            left: -3rem;
+            left: 0rem;
+        }
+
+        #imgLuca {
+            transform: scale(1.1);
 
         }
 
@@ -1642,8 +1819,8 @@ h1 {
         }
 
         #bulleAxel {
-            width: 350px;
-            max-width: 350px;
+            width: 360px;
+            max-width: 360px;
             left: -3rem;
         }
 
@@ -1652,7 +1829,7 @@ h1 {
         }
 
         #imgAxel {
-            transform: scale(1.8);
+            transform: scale(1);
 
         }
 
@@ -1661,23 +1838,34 @@ h1 {
         #paraMarie {
             position: relative;
             top: -15rem;
-            left: 1rem;
+            left: 3rem;
         }
 
         #imgMarie {
 
-            left: -12rem;
-            top: -2.5rem;
-            transform: scale(1.2);
+            left: -5rem;
+            top: 5rem;
+            transform: scale(2);
         }
 
         /********* FRONT MARYLINE *********/
         #imgMaryline {
-            transform: scale(1.3);
+            transform: scale(0.9);
         }
 
         #paraMaryline {
             left: 1rem;
+        }
+
+        /********* FRONT NICOLAS *********/
+
+        #bulleNicolas {
+            width: 300px;
+            height: 300px;
+        }
+
+        #paraNicolas {
+            top: -14rem;
         }
 
         /********* FRONT ALVIN *********/
@@ -1687,9 +1875,9 @@ h1 {
         }
 
         #imgAlvin {
-            transform: scale(3);
-            top: -4rem;
-            left: 2rem;
+            transform: scale(0.5);
+            top: -18rem;
+            left: -49rem;
 
         }
 
@@ -1701,19 +1889,40 @@ h1 {
             left: 0rem;
         }
 
+        /********* FRONT JARNO *********/
+
+        #imgJarno {
+            transform: scale(1.25);
+            left: 2rem;
+        }
+
         /********* FRONT AURELIEN *********/
+        #imgAurelien {
+            z-index: 1;
+        }
+
+        #bulleaurelien {
+            z-index: 0;
+        }
+
         #paraAurelien {
             left: 0rem;
         }
 
         /********* FRONT GUILLAUME *********/
-        #paraGuillaume {
-            left: 0rem;
-        }
+
 
         #bulleGuillaume {
-            left: -6rem;
+            left: -8rem;
             top: -5rem;
+        }
+
+        #imgGuillaume {
+            left: -16rem;
+        }
+
+        #paraGuillaume {
+            left: 0.5rem;
         }
 
         /********* FRONT STEPHANE*********/
@@ -1723,6 +1932,66 @@ h1 {
 
         #bulleStephane {
             left: -5rem;
+        }
+
+        /********* BACK CARDS*********/
+
+
+        #claire .left {
+            background-position: contain;
+            background-size: center;
+
+        }
+
+        #luca .left {
+            background-size: contain;
+            background-position: center;
+        }
+
+        #axel .left {
+            background-size: contain;
+            background-position: center;
+        }
+
+        #marie .left {
+            background-size: contain;
+            background-position: center;
+        }
+
+        #jarno .left {
+            background-size: cover;
+            background-position: center;
+        }
+
+        #nicolas .left {
+            background-size: cover;
+            background-position: center;
+        }
+
+        #alvin .left {
+            background-size: contain;
+            background-position: center;
+        }
+
+        #maryline .left {
+            background-size: contain;
+            background-position: center;
+        }
+
+        #aurelien .left {
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        #guillaume .left {
+            background-size: contain;
+            background-position: center;
+        }
+
+        #stephane .left {
+            background-size: cover;
+
         }
 
         /********* BAS DE PAGE *********/
@@ -1743,12 +2012,85 @@ h1 {
         }
 
         .choix1>.back {
-            padding: 1rem;
+            margin-left: 1.2rem;
         }
 
         .left {
             padding: 3.5rem;
         }
+
+        /***************** FRONT CARD *************/
+
+        /********* FRONT CLAIRE *********/
+
+        #imgClaire {
+            left: 5rem;
+        }
+
+
+        /********* FRONT LUCA *********/
+
+        #bulleLuca {
+            left: -4rem;
+            top: 5rem;
+        }
+
+        #paraLuca {
+            left: -1rem;
+            top: -6rem;
+        }
+
+        #imgLuca {
+            transform: scale(1.1);
+            left: -24rem;
+        }
+
+        /********* FRONT AXEL *********/
+
+        #imgAxel {
+            transform: scale(1);
+
+        }
+
+
+
+        /********* FRONT MARYLINE *********/
+
+        #paraMaryline {
+            left: -1rem;
+        }
+
+        /********* FRONT ALVIN *********/
+
+
+        /********* FRONT GUILLAUME *********/
+        #paraGuillaume {
+            left: 0rem;
+        }
+
+        #bulleGuillaume {
+            left: -9rem;
+            top: -5rem;
+        }
+
+        #imgGuillaume {
+            left: -18rem;
+        }
+
+        /********* FRONT STEPHANE*********/
+        #paraStephane {
+            left: 0rem;
+        }
+
+        #bulleStephane {
+            left: -3rem;
+        }
+
+        #imgStephane {
+            transform: scale(1);
+        }
+
+
     }
 
     @media screen and (max-width:320px) {
@@ -1770,8 +2112,9 @@ h1 {
             max-width: 300px;
         }
 
+
         .choix1>.back {
-            padding: 0rem;
+            margin-left: 0.4rem;
         }
 
         .left {
@@ -1816,7 +2159,7 @@ h1 {
 
         /********* FRONT CLAIRE *********/
         #imgClaire {
-            transform: scale(2.9);
+            transform: scale(3.5);
 
         }
 
@@ -1827,21 +2170,23 @@ h1 {
         /********* FRONT LUCA *********/
 
         #imgLuca {
-            transform: scale(1);
-            left: -7rem;
-            top: -3rem;
+            transform: scale(1.1);
+            left: -26rem;
+            top: rem;
             z-index: 1;
         }
 
 
         #bulleLuca {
-            left: -10rem;
-            top: -2rem;
+            left: -7rem;
+            top: 8rem;
+            transform: rotate(-15deg);
             z-index: 2;
         }
 
         #paraLuca {
-            left: -2rem;
+            left: -1rem;
+            top: -2rem;
             z-index: 2;
         }
 
@@ -1850,104 +2195,82 @@ h1 {
         #paraMarie {
             position: relative;
             top: -15rem;
-            left: -1rem;
+            left: 1rem;
+            text-align: justify;
         }
 
         #imgMarie {
-            left: -15rem;
-            transform: scale(1);
+            left: -6rem;
+            top: 8rem;
+            transform: scale(3.6);
         }
 
         #bulleMarie {
-            left: -8rem;
+            left: -7rem;
         }
 
         /********* FRONT MARYLINE *********/
         #imgMaryline {
-            transform: scale(1);
-            left: -6rem;
+            transform: scale(0.9);
+            left: -22rem;
         }
 
         #paraMaryline {
-            left: 1rem;
+            left: -0.5rem;
+            text-align: end;
         }
 
         #bulleMaryline {
-            top: -4rem;
-        }
-
-        /********* FRONT ALVIN *********/
-
-        #paraAlvin {
-            left: 1rem;
-        }
-
-        #imgAlvin {
-            transform: scale(3);
-            top: -4rem;
-            left: 2rem;
+            top: -2rem;
 
         }
 
-        #bulleAlvin {
-            left: -6rem;
-        }
-
-        #paraAlvin {
-            left: 0rem;
-        }
 
         /********* FRONT AURELIEN *********/
         #paraAurelien {
             left: 0rem;
         }
 
-        /********* FRONT GUILLAUME *********/
-        #paraGuillaume {
-            left: 0rem;
-        }
 
-        #bulleGuillaume {
-            left: -6rem;
-            top: -5rem;
-        }
 
         /********* FRONT NICOLAS*********/
 
         #imgNicolas {
             position: relative;
-            transform: scale(0.8);
-            left: -4rem;
+            transform: scale(1);
+            left: -6rem;
         }
 
         #bulleNicolas {
             width: 250px;
             max-width: 250px;
-            left: -5rem;
-            top: -3rem;
+            left: -4rem;
+            top: -5rem;
 
         }
 
         #paraNicolas {
-            top: -12rem;
-            left: -1rem;
+            top: -18rem;
+            left: 1rem;
+            text-align: justify;
         }
 
         /********* FRONT ALVIN*********/
-        #imgAlvin {
-            transform: scale(3.5);
-            top: -1rem;
 
+        #imgAlvin {
+            transform: scale(0.5);
+            top: -18rem;
+            left: -50rem;
         }
 
         #bulleAlvin {
-            width: 250px;
-            max-width: 250px;
-            left: 0rem;
+            width: 270px;
+            max-width: 270px;
+            left: -3rem;
         }
 
         #paraAlvin {
-            left: 3rem;
+            left: 1rem;
             top: -13rem;
         }
 
@@ -1957,8 +2280,8 @@ h1 {
             left: 2rem;
         }
 
-        #bullejarno {
-            left: 1rem;
+        #bulleJarno {
+            left: -3rem;
         }
 
         /********* FRONT AURELIEN *********/
@@ -1987,18 +2310,21 @@ h1 {
 
         /********* FRONT GUILLAUME*********/
 
+        /********* FRONT GUILLAUME *********/
+
         #bulleGuillaume {
-            width: 300px;
-            max-width: 300px;
+            left: -6rem;
+            top: -5rem;
+            width: 320px;
         }
 
         #imgGuillaume {
+            left: -20rem;
             transform: scale(0.8);
-            left: -6.5rem;
         }
 
         #paraGuillaume {
-            top: -14rem;
+            top: -15rem;
         }
 
         /********* FRONT STEPHANE*********/
@@ -2014,10 +2340,6 @@ h1 {
             transform: scale(0.9);
         }
 
-        #stephane>.front {
-            background-size: 150%;
-
-        }
 
         #basDePage {
             padding-top: 10rem;
