@@ -244,7 +244,7 @@ main:hover {
 #paraClaire {
     position: relative;
     left: -2rem;
-    top: -16rem;
+    top: -19rem;
 
 }
 
@@ -252,6 +252,7 @@ main:hover {
     width: 370px;
     transform: scaleX(-1);
     left: -4rem;
+    top: -5rem;
 
 }
 
@@ -301,21 +302,21 @@ main:hover {
 
     width: 450px;
     max-width: 450px;
-    left: -12rem;
+    left: -10rem;
     top: 4rem;
 
 }
 
 #paraAxel {
     position: relative;
-    left: -12rem;
-    top: -10rem;
+    left: -10rem;
+    top: -8rem;
 
 }
 
 #imgAxel {
     justify-self: flex-start;
-    width: 101%;
+    transform: scale(0.9);
 }
 
 /********* FRONT MARIE *********/
@@ -1011,7 +1012,7 @@ h1 {
         /********* FRONT AXEL *********/
 
         #imgAxel {
-            transform: scale(1.2);
+            transform: scale(0.9);
         }
 
         /********* FRONT ALVIN *********/
@@ -1210,7 +1211,7 @@ h1 {
         #bulleAxel {
             width: 350px;
             max-width: 350px;
-            left: -5rem;
+            left: -3rem;
         }
 
         #paraAxel {
@@ -1221,7 +1222,7 @@ h1 {
 
         #imgAxel {
             position: relative;
-            transform: scale(1.2);
+            transform: scale(0.9);
             left: 5rem;
         }
 
@@ -1247,11 +1248,14 @@ h1 {
 
         /********* FRONT NICOLAS *********/
         #bulleNicolas {
-            left: -7rem;
+            left: -5rem;
+            top: -3rem;
+            width: 300px;
         }
 
         #paraNicolas {
-            left: 0.5rem;
+            left: -0.5rem;
+            top: -14rem;
         }
 
         #imgNicolas {
@@ -1473,14 +1477,21 @@ h1 {
         #bulleAxel {
             width: 350px;
             max-width: 350px;
-            left: -3rem;
+            left: -1rem;
+            z-index: 0;
         }
 
         #paraAxel {
             position: relative;
-            left: 1rem;
+            left: 3rem;
             top: -7rem;
 
+        }
+
+        #imgAxel {
+            transform: scale(0.8);
+            left: -4rem;
+            z-index: 1;
         }
 
         /********* FRONT MARIE *********/
@@ -1690,16 +1701,19 @@ h1 {
             flex-direction: column;
             justify-content: center;
             overflow-y: scroll;
+            overflow-x: scroll;
             margin-left: 1.2rem;
-            border: 2px solid orange;
+
         }
 
         .left {
+            padding: 0 0 10rem 0;
             display: flex;
             align-items: center;
             line-height: 1rem;
-            border: 2px solid red;
-            transform: scale(1.1);
+
+            height: 300px;
+            margin-top: 14rem;
 
 
 
@@ -1708,15 +1722,16 @@ h1 {
         .right {
 
             width: 100%;
-            margin-top: 5rem;
-            border: 2px solid green;
+            margin-top: 3rem;
+
         }
 
 
         .profil {
 
-            padding: 2rem;
+            padding: 3rem;
             font-size: 0.6rem;
+
         }
 
 
@@ -1793,9 +1808,7 @@ h1 {
             transform: scale(2.5);
         }
 
-        #paraClaire {
-            left: -1rem;
-        }
+
 
         /********* FRONT LUCA *********/
 
@@ -1829,7 +1842,8 @@ h1 {
         }
 
         #imgAxel {
-            transform: scale(1);
+            transform: scale(0.8);
+            left: -8rem;
 
         }
 
@@ -1865,7 +1879,7 @@ h1 {
         }
 
         #paraNicolas {
-            top: -14rem;
+            top: -16rem;
         }
 
         /********* FRONT ALVIN *********/
@@ -1936,11 +1950,21 @@ h1 {
 
         /********* BACK CARDS*********/
 
+        #profilClaire {
+            left: 0rem;
+            top: 10rem;
+        }
+
 
         #claire .left {
-            background-position: contain;
-            background-size: center;
+            background-position: center;
+            background-size: contain;
 
+        }
+
+        #profilLuca {
+            left: 0rem;
+            top: 10rem;
         }
 
         #luca .left {
@@ -1948,24 +1972,40 @@ h1 {
             background-position: center;
         }
 
+        #profilAxel,
+        #profilNicolas,
+        #profilAlvin {
+            top: 10rem;
+        }
+
         #axel .left {
             background-size: contain;
             background-position: center;
         }
 
+        #profilMarie {
+            top: 10rem;
+            left: 0rem;
+        }
+
         #marie .left {
-            background-size: contain;
-            background-position: center;
+            background-size: 100%;
+
+        }
+
+        #profilJarno {
+            left: 1rem;
+            top: 12rem;
         }
 
         #jarno .left {
-            background-size: cover;
-            background-position: center;
+            background-size: 100%;
+
         }
 
         #nicolas .left {
-            background-size: cover;
-            background-position: center;
+            background-size: 100%;
+
         }
 
         #alvin .left {
@@ -1973,24 +2013,42 @@ h1 {
             background-position: center;
         }
 
+        #profilMaryline {
+            left: 0rem;
+            top: 10rem;
+        }
+
         #maryline .left {
             background-size: contain;
             background-position: center;
         }
 
-        #aurelien .left {
-            background-size: cover;
-            background-position: center;
+        #profilAurelien {
+            top: 9rem;
         }
 
+        #aurelien .left {
+            background-size: contain;
+        }
+
+        #profilGuillaume {
+            left: 0rem;
+            top: 10rem;
+        }
 
         #guillaume .left {
             background-size: contain;
             background-position: center;
         }
 
+        #profilStephane {
+            left: 1rem;
+            top: 10rem;
+        }
+
         #stephane .left {
-            background-size: cover;
+            background-size: 117%;
+            background-position: right;
 
         }
 
@@ -2007,17 +2065,30 @@ h1 {
     }
 
     @media screen and (max-width:425px) {
+
+        /********* FRONT *********/
         .center>p {
             font-size: 0.8rem;
+
         }
 
-        .choix1>.back {
-            margin-left: 1.2rem;
-        }
+        /********* BACK *********/
 
         .left {
-            padding: 3.5rem;
+
+            padding-bottom: 15rem;
+            margin-top: 22rem;
         }
+
+        .profil {
+            font-size: 1rem;
+
+        }
+
+        .profil>h1 {
+            font-size: 1rem;
+        }
+
 
         /***************** FRONT CARD *************/
 
@@ -2048,8 +2119,16 @@ h1 {
         /********* FRONT AXEL *********/
 
         #imgAxel {
-            transform: scale(1);
+            transform: scale(0.7);
 
+        }
+
+        #paraAxel {
+            left: 1rem;
+        }
+
+        #bulleAxel {
+            left: -3rem;
         }
 
 
@@ -2090,6 +2169,52 @@ h1 {
             transform: scale(1);
         }
 
+        /********* BACK CARD*********/
+
+        #profilClaire,
+        #profilLuca,
+        #profilAxel,
+        #profilMaryline,
+        #profilAlvin,
+        #profilGuillaume {
+            top: 14rem;
+        }
+
+        #profilMarie {
+            top: 14rem;
+            left: 1.5rem;
+        }
+
+        #marie .left {
+            background-size: contain;
+            background-position: center;
+        }
+
+
+        #profilNicolas {
+            top: 11rem;
+            left: -1rem;
+
+        }
+
+        #nicolas .left {
+            background-size: cover;
+        }
+
+        #profilAurelien {
+            left: 1rem;
+            top: 12rem;
+        }
+
+        #profilStephane {
+            top: 12rem;
+            left: 0rem;
+        }
+
+        #stephane .left {
+            background-size: cover;
+        }
+
 
     }
 
@@ -2114,12 +2239,19 @@ h1 {
 
 
         .choix1>.back {
-            margin-left: 0.4rem;
+            width: 95%;
+            margin-left: 0.2rem;
+            padding-left: 0.2rem;
+
         }
 
         .left {
-            line-height: 1rem;
+            width: 100%;
+            line-height: 0.9rem;
+        }
 
+        .profil {
+            padding: 1.6rem;
         }
 
         #jarno .left,
@@ -2188,6 +2320,21 @@ h1 {
             left: -1rem;
             top: -2rem;
             z-index: 2;
+        }
+
+        /********* FRONT AXEL*********/
+
+        #imgAxel {
+            left: -12rem;
+        }
+
+        #bulleAxel {
+            top: 8rem;
+            left: -6rem;
+        }
+
+        #paraAxel {
+            top: -2rem;
         }
 
         /********* FRONT MARIE *********/
@@ -2308,7 +2455,7 @@ h1 {
             top: -12rem;
         }
 
-        /********* FRONT GUILLAUME*********/
+
 
         /********* FRONT GUILLAUME *********/
 
@@ -2340,9 +2487,44 @@ h1 {
             transform: scale(0.9);
         }
 
+        #profilMarie {
+            top: 12rem;
+        }
+
 
         #basDePage {
             padding-top: 10rem;
+        }
+
+        /********* BACK CARDS*********/
+        #marie .left {
+            background-size: cover;
+
+        }
+
+        #nicolas .left {
+            background-size: cover;
+        }
+
+        #profilAlvin {
+            top: 12rem;
+        }
+
+        #jarno .left {
+            background-size: cover;
+        }
+
+        #aurelien .left {
+            background-size: cover;
+        }
+
+        #profilStephane {
+            left: -1rem;
+        }
+
+        #stephane .left {
+            background-size: cover;
+            padding-left: 2rem;
         }
 
 
